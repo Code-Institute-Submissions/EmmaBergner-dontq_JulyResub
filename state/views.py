@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from.views import generic
+from django.views import generic
 from .models import State 
 from django.views.generic.detail import DetailView
 

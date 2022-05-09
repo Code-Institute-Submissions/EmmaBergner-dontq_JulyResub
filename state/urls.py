@@ -18,6 +18,5 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', views.ControlPage.as_view, name="Control"),
-    path('adminx/', admin.site.urls),
+    path('', views.ControlPage.as_view(), name="Control"),
 ]

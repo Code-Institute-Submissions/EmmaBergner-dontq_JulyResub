@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 class State(models.Model):
+    id = models.AutoField(primary_key=True)
     business = models.ForeignKey(User, on_delete=models.CASCADE, related_name="nr_queue")
     current = models.IntegerField(default=0)
 

@@ -1,10 +1,15 @@
-from django.shortcuts import render
-from django.views import generic
+from django.shortcuts import render, get_object_or_404
+from django.views import generic, View
 from .models import State 
-from django.views.generic.detail import DetailView
 
 # Create your views here.
-class ControlPage(DetailView):
+class ControlPage(View):
     model = State 
     template_name = 'business.html'
+
+    def get(self, request, *args, **kwargs):
+        queryset = State.objects.all()
+        state = get_object_or_404(queryset, id=2)
+        
+        return render(request, 'business.html')
 

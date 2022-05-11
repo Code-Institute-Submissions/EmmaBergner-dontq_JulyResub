@@ -6,44 +6,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/style.css"> -->
     <title>DontQ</title>
 </head>
+
+<!-- CSS HERE-->
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Jura&family=Varela+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Jura&family=Merriweather:wght@300&display=swap');
 
     body {
         background-color: white;
     }
 
     h2 {
+        padding-top: 50px;
+        font-size: 90%;
+        font-family: Jura;
         color: black;
+        margin-top: 100px;
+        margin-left: 30%;
     }
 
-    h1 {
-        color: grey;
-        font-family: Varela Round, Arial;
-        font-size: 120px;
+    #queueNumber {
+        color: black;
+        font-family: Merriweather, Arial;
+        font-size: 200px;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
     }
 
-    p {
-        color: black;
+    .prevButton {
+        background-color: green;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        margin: 15px;
+        border: 1px solid rgb(174, 171, 171);
+        border-radius: 5px;
     }
+
+    .nextButton {
+        background-color: green;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        margin: 15px;
+        border: 1px solid rgb(174, 171, 171);
+        border-radius: 5px;
+    }
+
+    #button {
+        margin-top: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #resetButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        border: 1px solid rgb(174, 171, 171);
+        color: white;
+        background-color: rgb(184, 10, 10);
+        padding: 10px 15px;
+        border-radius: 50%;
+    
+    } 
 </style>
 
 <body>
     <header>
+        <!-- Top section -->
+        Log Out
+        <h2>Currently:</h2>
 
-        <center>
-            <p>Currently:</p>
+        <!-- Middle section -->
+        <div id="queueNumber">36</div>
 
-            <h2>
-                36
-            </h2>
-           
 
-           
-        </center>
+        <!-- bottom section -->
+        <div id="button">
+            <button class="prevButton">
+                < </button>
+                    <button class="nextButton"> > </button>
+        </div>
+        <p>
+           <!-- <button id="resetButton">Reset</button>-->
+        </p>
+
+
     </header>
 </body>
 

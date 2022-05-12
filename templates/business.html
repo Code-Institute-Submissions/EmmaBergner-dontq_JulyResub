@@ -14,7 +14,11 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Jura&family=Merriweather:wght@300&family=Poiret+One&display=swap');
 
-
+    * {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
     body {
         background-color: #FFFFFD;
 
@@ -40,6 +44,7 @@
         font-family: Poiret One;
         font-size: 24px;
         float: left;
+        
         /* display: flex;
         justify-content: left;
          align-items: center;
@@ -74,7 +79,7 @@
     }
 
     .mainText {
-        padding-top: 100px;
+        padding-top: 50%;
         font-size: 20px;
         font-family: Jura;
         color: #61514B;
@@ -128,10 +133,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: auto;
         color: #F44D29;
         padding: 10px 15px;
-        margin-top: 160px;
+        margin-top: 100px;
     }
 </style>
 
@@ -145,7 +149,7 @@
         <div class="mainText">Currently:</div>
 
         <!-- Middle section -->
-        <div id="queueNumber">36</div>
+        <div id="queueNumber">{{ current }}</div>
 
 
         <!-- bottom section -->

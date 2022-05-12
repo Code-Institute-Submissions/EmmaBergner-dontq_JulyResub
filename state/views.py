@@ -11,6 +11,8 @@ class ControlPage(View):
     def get(self, request, *args, **kwargs):
         queryset = State.objects.all()
         state = get_object_or_404(queryset, id=2)
-        
-        return render(request, 'business.html')
-        return render(request, 'user.html')
+        context = {
+            'current': state.current
+        }
+        return render(request, 'business.html', context)
+        # return render(request, 'user.html')

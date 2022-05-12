@@ -12,52 +12,108 @@
 
 <!-- CSS HERE-->
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Jura&family=Merriweather:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Jura&family=Merriweather:wght@300&family=Poiret+One&display=swap');
+
 
     body {
-        background-color: white;
+        background-color: #FFFFFD;
+
     }
 
-    h2 {
-        padding-top: 50px;
-        font-size: 90%;
+    #logo {
+        color: #F44D29;
+        font-family: Poiret One;
+        font-size: 24px;
+        float: left;
+        margin-left: 5%;
+        /* display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: auto; 
+        padding: 10px 25px;
+        margin-top: 20px;  */
+
+    }
+
+    #logoTwo {
+        color: #027E88;
+        font-family: Poiret One;
+        font-size: 24px;
+        float: left;
+        /* display: flex;
+        justify-content: left;
+         align-items: center;
+        margin: auto; 
+        padding: 10px 25px;
+        margin-top: 20px; */
+
+
+    }
+
+
+    #menu {
         font-family: Jura;
-        color: black;
-        margin-top: 100px;
-        margin-left: 30%;
+        font-size: 16px;
+        color: #61514B;
+        float: right;
+        margin-right: 5%;
+
+        /* display: flex;
+        justify-content: right;
+        align-items: center;
+        margin: auto; 
+        padding: 10px 25px;
+        margin-top: 20px;  */
+
+    }
+
+    #logo,
+    #logoTwo,
+    #menu {
+        line-height: 75px;
+    }
+
+    .mainText {
+        padding-top: 100px;
+        font-size: 20px;
+        font-family: Jura;
+        color: #61514B;
+        /* margin-top: 80px; */
+        margin-left: 15%;
     }
 
     #queueNumber {
-        color: black;
+        color: #07485A;
         font-family: Merriweather, Arial;
-        font-size: 200px;
+        font-size: 128px;
         margin: auto;
         text-align: center;
         padding: 10px;
     }
 
     .prevButton {
-        background-color: green;
-        color: white;
-        padding: 15px 32px;
+        font-family: Jura;
+        background-color: #FFFFFD;
+        color: #027E88;
+        border: 1px solid #027E88;
+        padding: 5px 45px;
         text-align: center;
         display: inline-block;
-        font-size: 20px;
+        font-size: 64px;
         margin: 15px;
-        border: 1px solid rgb(174, 171, 171);
-        border-radius: 5px;
     }
 
     .nextButton {
-        background-color: green;
-        color: white;
-        padding: 15px 32px;
+        font-family: Jura;
+        background-color: #027E88;
+        color: #FFFFFD;
+        border: 1px solid #FFFFFD;
+        padding: 5px 45px;
         text-align: center;
         display: inline-block;
-        font-size: 20px;
+        font-size: 64px;
         margin: 15px;
-        border: 1px solid rgb(174, 171, 171);
-        border-radius: 5px;
+
     }
 
     #button {
@@ -68,24 +124,25 @@
     }
 
     #resetButton {
+        font-family: Jura;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: auto;
-        border: 1px solid rgb(174, 171, 171);
-        color: white;
-        background-color: rgb(184, 10, 10);
+        color: #F44D29;
         padding: 10px 15px;
-        border-radius: 50%;
-    
-    } 
+        margin-top: 160px;
+    }
 </style>
 
 <body>
     <header>
         <!-- Top section -->
-        Log Out
-        <h2>Currently:</h2>
+        <div id="logo"> Dont</div>
+        <div id="logoTwo">Q</div>
+        <div id="menu">Log Out</div>
+
+        <div class="mainText">Currently:</div>
 
         <!-- Middle section -->
         <div id="queueNumber">36</div>
@@ -98,7 +155,7 @@
                     <button class="nextButton"> > </button>
         </div>
         <p>
-           <!-- <button id="resetButton">Reset</button>-->
+        <div id="resetButton">Reset</div>
         </p>
 
 

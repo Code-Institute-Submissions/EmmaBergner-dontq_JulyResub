@@ -12,18 +12,25 @@ class ControlPage(View):
 
     def get(self, request, *args, **kwargs):
         print("hello")
-        
+
         queryset = State.objects.all()
         state = get_object_or_404(queryset, id=2)
         if (request.GET.get('mybtn')):
             print("world")
-            state.current = state.current+1
+            state.current = state.current-1
             state.save()
+        if (request.GET.get('mybtng')):
+            print("world")
+            state.current = state.current+1
+            state.save()    
+        if (request.GET.get('myreset')):
+            print("world")
+            state.current = state.current=0
+            state.save()  
         context = {
             'current': state.current
         }
         return render(request, 'business.html', context)
-
 
 
 def request_page(request):

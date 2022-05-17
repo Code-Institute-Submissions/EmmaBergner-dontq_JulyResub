@@ -122,14 +122,14 @@
 
     }
 
-    #button {
+    .buttonRow {
         margin-top: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    #resetButton {
+    .resetButton {
         font-family: Jura;
         display: flex;
         justify-content: center;
@@ -154,18 +154,29 @@
 
 
         <!-- bottom section -->
-        <div id="button">
+        <div class="buttonRow">
             <form action="#" method="get">
                 <input type="submit" class="prevButton" value="&lt;" name="mybtn">
-                <input type="text"> 
+                <!-- <input type="text">  -->
                 {% csrf_token %}
             </form>
-            <button class="nextButton"> &gt; </button>
+            <form action="#" method="get">
+                <input type="submit" class="nextButton" value="&gt;" name="mybtng">
+                <!-- <input type="text">  -->
+                {% csrf_token %}
+            </form>
+            <!-- <button class="nextButton"> &gt; </button> -->
         </div>
         <p>
-        <div id="resetButton">Reset</div>
+        <div class="buttonRow">
+            <form action="#" method="get">
+            <input type="submit" class="resetButton" value="Reset" name="myreset">
+            <!-- <input type="text">  -->
+            {% csrf_token %}
+            </form>
+        </div>
         </p>
-
+        <!-- <div id="resetButton">Reset</div> -->
 
     </header>
 </body>

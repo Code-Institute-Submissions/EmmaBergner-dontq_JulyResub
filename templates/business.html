@@ -76,11 +76,11 @@
     #logo,
     #logoTwo,
     #menu {
-        line-height: 75px;
+        line-height: 8vh;
     }
 
     .mainText {
-        padding-top: 50%;
+        padding-top: 20vh;
         font-size: 20px;
         font-family: Jura;
         color: #61514B;
@@ -91,7 +91,7 @@
     #queueNumber {
         color: #07485A;
         font-family: Merriweather, Arial;
-        font-size: 128px;
+        font-size: 200px;
         margin: auto;
         text-align: center;
         padding: 10px;
@@ -102,7 +102,7 @@
         background-color: #FFFFFD;
         color: #027E88;
         border: 1px solid #027E88;
-        padding: 5px 45px;
+        padding: 10px 45px;
         text-align: center;
         display: inline-block;
         font-size: 64px;
@@ -114,7 +114,7 @@
         background-color: #027E88;
         color: #FFFFFD;
         border: 1px solid #FFFFFD;
-        padding: 5px 45px;
+        padding: 10px 45px;
         text-align: center;
         display: inline-block;
         font-size: 64px;
@@ -123,7 +123,8 @@
     }
 
     .buttonRow {
-        margin-top: 20%;
+        margin-top: 10vh;
+        margin-bottom: 15vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -132,11 +133,13 @@
     .resetButton {
         font-family: Jura;
         display: flex;
+        font-size: 16px;
         justify-content: center;
         align-items: center;
         color: #F44D29;
-        padding: 10px 15px;
-        margin-top: 100px;
+        background-color: #FFFFFD;
+        /* padding: 10px 15px;
+        /* margin-top: 100px; */ 
     }
 </style>
 
@@ -156,18 +159,20 @@
         <!-- bottom section -->
         <div class="buttonRow">
             <form action="#" method="get">
-                <input type="submit" class="prevButton" value="&lt;" name="mybtn">
+                <input type="submit" class="prevButton" value="&lt;" name="mybtn">  
+               
                 <!-- <input type="text">  -->
                 {% csrf_token %}
             </form>
             <form action="#" method="get">
-                <input type="submit" class="nextButton" value="&gt;" name="mybtng">
+                <input type="submit" class="nextButton" value="&gt;" name="mybtng"> 
                 <!-- <input type="text">  -->
                 {% csrf_token %}
             </form>
             <!-- <button class="nextButton"> &gt; </button> -->
         </div>
         <p>
+            <div class="mainText">Currently:</div>
         <div class="buttonRow">
             <form action="#" method="get">
             <input type="submit" class="resetButton" value="Reset" name="myreset">

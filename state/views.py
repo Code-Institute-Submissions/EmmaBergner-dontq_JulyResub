@@ -11,29 +11,37 @@ class ControlPage(View):
     template_name = 'user.html'
 
     def get(self, request, *args, **kwargs):
-        print("hello")
-
         queryset = State.objects.all()
         state = get_object_or_404(queryset, id=2)
-        if (request.GET.get('mybtn')):
-            print("world")
+        if (request.GET.get('mybtn') and state.current>0):
             state.current = state.current-1
-            state.save()
         if (request.GET.get('mybtng')):
-            print("world")
-            state.current = state.current+1
-            state.save()    
+            state.current = state.current+1  
         if (request.GET.get('myreset')):
-            print("world")
             state.current = state.current=0
-            state.save()  
+        state.save()  
         context = {
             'current': state.current
         }
         return render(request, 'business.html', context)
 
+class UserPage(View):
+    model = State
+    template_name = 'business.html'
+    template_name = 'user.html'
 
-def request_page(request):
-    if(request.GET.get('mybtn')):
-        mypythoncode.mypythonfunction(int(request.GET.get('mytextbox')))
-    return render(request, 'myApp/templateHTML.html')
+    def get(self, request, *args, **kwargs):
+        print(self)
+        print(request)
+        print(args)
+        print(kwargs)
+        queryset = State.objects.all()
+        state = get_object_or_404(queryset, id=2)
+        context = {
+            'current': state.current,
+            'next': state.next
+        }
+        state.next = state.next+1 
+        state.save()  
+        return render(request, 'user.html', context)
+

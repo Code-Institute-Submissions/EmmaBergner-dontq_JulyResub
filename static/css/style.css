@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="refresh" content="2" /> -->
-    <link rel="stylesheet"  href="../css/style.css"> 
-    <title>DontQ</title>
-</head>
-
- <style>
 <!-- CSS HERE-->
     @import url('https://fonts.googleapis.com/css2?family=Jura&family=Merriweather:wght@300&family=Poiret+One&display=swap');
 
@@ -115,50 +103,3 @@
         font-family: Merriweather, Arial;
         font-size: 13px;
     }
-
- </style>
- 
-<body>
-    <header>
-        <!-- Top section --> 
-        <div id="logo"> Dont</div>
-        <div id="logoTwo">Q</div>
-
-        <div class="mainText">Your Turn:</div>
-
-        <!-- Middle section -->
-        <div id="queueNumber"> {{ next }} </div>
-
-
-        <!-- bottom section -->
-        <p>
-        <div class="currentlyText">Currently: {{ current }} </div>
-        </p>
-    </header>
-
-    <footer>
-        <ul class="socialNetwork">
-            <li>
-                <a href="https://twitter.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa fa-twitter"
-                        aria-hidden="true"></i></a>
-            </li>
-            <li>
-                <a href="https://youtube.com" target="_blank" rel="noopener"
-                    aria-label="Visit our YouTube page (opens in a new tab)"><i class="fa fa-facebook"
-                        aria-hidden="true"></i></a>
-            </li>
-            <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
-            </li>
-        </ul>
-        <div class="copyRight">&copy; Copyright 2022: DontQ </div>
-
-    </footer>
-
-    <!-- font awesome script -->
-    <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
-</body>
-
-</html>

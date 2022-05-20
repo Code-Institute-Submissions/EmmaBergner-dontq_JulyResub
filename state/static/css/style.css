@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&family=Merriweather:wght@300&family=Poiret+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: #FFFFFD;
+}
+
+#logo {
+    color: #F44D29;
+    font-family: Poiret One;
+    font-size: 24px;
+    float: left;
+    margin-left: 5%;
+}
+
+#logoTwo {
+    color: #027E88;
+    font-family: Poiret One;
+    font-size: 24px;
+    float: left;
+}
+
+#menu {
+    font-family: Jura;
+    font-size: 16px;
+    color: #61514B;
+    float: right;
+    margin-right: 5%;
+}
+
+#logo,
+#logoTwo,
+#menu {
+    line-height: 8vh;
+}
+
+.mainText {
+    padding-top: 20vh;
+    font-size: 20px;
+    font-family: Jura;
+    color: #61514B;
+    margin-left: 15%;
+}
+
+#queueNumber {
+    color: #07485A;
+    font-family: Merriweather, Arial;
+    font-size: 200px;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.prevButton {
+    font-family: Jura;
+    background-color: #FFFFFD;
+    color: #027E88;
+    border: 1px solid #027E88;
+    padding: 10px 45px;
+    text-align: center;
+    display: inline-block;
+    font-size: 64px;
+    margin: 15px;
+}
+
+.nextButton {
+    font-family: Jura;
+    background-color: #027E88;
+    color: #FFFFFD;
+    border: 1px solid #FFFFFD;
+    padding: 10px 45px;
+    text-align: center;
+    display: inline-block;
+    font-size: 64px;
+    margin: 15px;
+}
+
+.currentlyText {
+    font-size: 20px;
+    font-family: Jura;
+    color: #61514B;
+    margin-left: 15%;
+    margin-top: 10vh;
+}
+
+#currentlyNumber {
+    color: #07485A;
+    font-family: Merriweather, Arial;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.buttonRow {
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resetButton {
+    font-family: Jura;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    color: #F44D29;
+    background-color: #FFFFFD;
+}
+
+footer {
+    height: 150px;
+    margin-top: 20vh;
+}
+
+.socialNetwork {
+    text-align: center;
+}
+
+.socialNetwork>li {
+    display: inline;
+}
+
+.socialNetwork i {
+    font-size: 20px;
+    padding: 1%;
+    color: #61514B;
+    background-color: #FFFFFD;
+}
+
+.copyRight {
+    margin: auto;
+    text-align: center;
+    padding: 9px;
+    color: #61514B;
+    font-family: Merriweather, Arial;
+    font-size: 13px;
+}

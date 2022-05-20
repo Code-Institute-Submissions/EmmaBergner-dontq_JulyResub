@@ -5,119 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="refresh" content="2" /> -->
-    <link rel="stylesheet"  href="../css/style.css"> 
+    <meta http-equiv="refresh" content="2" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
     <title>DontQ</title>
 </head>
 
- <style>
-<!-- CSS HERE-->
-    @import url('https://fonts.googleapis.com/css2?family=Jura&family=Merriweather:wght@300&family=Poiret+One&display=swap');
-
-    * {
-        margin: 0;
-        padding: 0;
-        border: none;
-    }
-
-    body {
-        background-color: #FFFFFD;
-    }
-
-    #logo {
-        color: #F44D29;
-        font-family: Poiret One;
-        font-size: 24px;
-        float: left;
-        margin-left: 5%;
-    }
-
-    #logoTwo {
-        color: #027E88;
-        font-family: Poiret One;
-        font-size: 24px;
-        float: left;
-    }
-
-    #logo,
-    #logoTwo {
-        line-height: 8vh;
-    }
-
-    .mainText {
-        padding-top: 20vh;
-        font-size: 20px;
-        font-family: Jura;
-        color: #61514B;
-        margin-left: 15%;
-    }
-
-    #queueNumber {
-        color: #07485A;
-        font-family: Merriweather, Arial;
-        font-size: 200px;
-        margin: auto;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .currentlyText {
-        font-size: 20px;
-        font-family: Jura;
-        color: #61514B;
-        margin-left: 15%;
-        margin-top: 10vh;
-    }
-
-    #currentlyNumber {
-        color: #07485A;
-        font-family: Merriweather, Arial;
-        font-size: 20px;
-        margin: auto;
-        text-align: center;
-        padding: 10px;
-    }
-
-
-    .buttonRow {
-        margin-top: 10vh;
-        margin-bottom: 15vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    footer {
-        height: 150px;
-        margin-top: 20vh;
-    }
-
-    .socialNetwork {
-        text-align: center;
-    }
-
-    .socialNetwork>li {
-        display: inline;
-    }
-
-    .socialNetwork i {
-        font-size: 20px;
-        padding: 1%;
-        color: #61514B;
-        background-color: #FFFFFD;
-    }
-
-    .copyRight {
-        margin: auto;
-        text-align: center;
-        padding: 9px;
-        color: #61514B;
-        font-family: Merriweather, Arial;
-        font-size: 13px;
-    }
-
- </style>
- 
 <body>
     <header>
         <!-- Top section --> 
@@ -129,11 +23,15 @@
         <!-- Middle section -->
         <div id="queueNumber"> {{ next }} </div>
 
-
+ 
         <!-- bottom section -->
         <p>
-        <div class="currentlyText">Currently: {{ current }} </div>
+        <div class="currentlyText"> Current: {{ current }} </div>
         </p>
+
+        <p>
+            <div class="currentlyText"> Remaining: {{ remaining }} </div>
+            </p>
     </header>
 
     <footer>

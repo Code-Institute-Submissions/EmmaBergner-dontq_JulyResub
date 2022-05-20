@@ -5,143 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--<link rel="stylesheet" href="css/style.css"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
     <title>DontQ</title>
 </head>
-
-<!-- CSS HERE-->
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Jura&family=Merriweather:wght@300&family=Poiret+One&display=swap');
-
-    * {
-        margin: 0;
-        padding: 0;
-        border: none;
-    }
-
-    body {
-        background-color: #FFFFFD;
-
-    }
-
-    #logo {
-        color: #F44D29;
-        font-family: Poiret One;
-        font-size: 24px;
-        float: left;
-        margin-left: 5%;
-        /* display: flex;
-        justify-content: left;
-        align-items: center;
-        margin: auto; 
-        padding: 10px 25px;
-        margin-top: 20px;  */
-
-    }
-
-    #logoTwo {
-        color: #027E88;
-        font-family: Poiret One;
-        font-size: 24px;
-        float: left;
-
-        /* display: flex;
-        justify-content: left;
-         align-items: center;
-        margin: auto; 
-        padding: 10px 25px;
-        margin-top: 20px; */
-
-
-    }
-
-
-    #menu {
-        font-family: Jura;
-        font-size: 16px;
-        color: #61514B;
-        float: right;
-        margin-right: 5%;
-
-        /* display: flex;
-        justify-content: right;
-        align-items: center;
-        margin: auto; 
-        padding: 10px 25px;
-        margin-top: 20px;  */
-
-    }
-
-    #logo,
-    #logoTwo,
-    #menu {
-        line-height: 8vh;
-    }
-
-    .mainText {
-        padding-top: 20vh;
-        font-size: 20px;
-        font-family: Jura;
-        color: #61514B;
-        /* margin-top: 80px; */
-        margin-left: 15%;
-    }
-
-    #queueNumber {
-        color: #07485A;
-        font-family: Merriweather, Arial;
-        font-size: 200px;
-        margin: auto;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .prevButton {
-        font-family: Jura;
-        background-color: #FFFFFD;
-        color: #027E88;
-        border: 1px solid #027E88;
-        padding: 10px 45px;
-        text-align: center;
-        display: inline-block;
-        font-size: 64px;
-        margin: 15px;
-    }
-
-    .nextButton {
-        font-family: Jura;
-        background-color: #027E88;
-        color: #FFFFFD;
-        border: 1px solid #FFFFFD;
-        padding: 10px 45px;
-        text-align: center;
-        display: inline-block;
-        font-size: 64px;
-        margin: 15px;
-
-    }
-
-    .buttonRow {
-        margin-top: 10vh;
-        margin-bottom: 15vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .resetButton {
-        font-family: Jura;
-        display: flex;
-        font-size: 16px;
-        justify-content: center;
-        align-items: center;
-        color: #F44D29;
-        background-color: #FFFFFD;
-        /* padding: 10px 15px;
-        /* margin-top: 100px; */ 
-    }
-</style>
 
 <body>
     <header>
@@ -160,30 +27,24 @@
         <div class="buttonRow">
             <form action="#" method="get">
                 <input type="submit" class="prevButton" value="&lt;" name="mybtn">  
-               
-                <!-- <input type="text">  -->
                 {% csrf_token %}
             </form>
+
             <form action="#" method="get">
                 <input type="submit" class="nextButton" value="&gt;" name="mybtng"> 
-                <!-- <input type="text">  -->
                 {% csrf_token %}
             </form>
-            <!-- <button class="nextButton"> &gt; </button> -->
         </div>
+
         <p>
-            <div class="mainText">Currently:</div>
         <div class="buttonRow">
             <form action="#" method="get">
             <input type="submit" class="resetButton" value="Reset" name="myreset">
-            <!-- <input type="text">  -->
             {% csrf_token %}
             </form>
         </div>
         </p>
-        <!-- <div id="resetButton">Reset</div> -->
 
     </header>
 </body>
-
 </html>

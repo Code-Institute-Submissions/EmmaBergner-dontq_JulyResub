@@ -5,4 +5,5 @@ from django.urls import path, include
 urlpatterns = [
     path('', views.ControlPage.as_view(), name="Control"),
     path('user', views.UserPage.as_view(), name="User"),
+    path('usertwo', views.UserTwoPage.as_view(), name="User"),
 ]

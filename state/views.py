@@ -48,9 +48,10 @@ class UserTwoPage(View):
     def get(self, request, *args, **kwargs):
         queryset = State.objects.all()
         state = get_object_or_404(queryset, id=2)
+        ticket =  request.get_full_path().split("?")[1]
         context = {
             'current': state.current,
-            'next': request.get_full_path().split("?")[1],
-            'remaining' :  state.current - state.next -12,
+            'ticket': ticket,
+            'remaining' : int(ticket) - state.current,
         }
         return render(request, 'user.html', context)

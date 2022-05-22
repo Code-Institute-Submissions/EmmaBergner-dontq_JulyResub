@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from .models import State
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
 
 # Create your views here.
 
-
+@method_decorator(login_required, name='get')
 class ControlPage(View):
     model = State
     template_name = 'business.html'
@@ -42,8 +45,7 @@ class UserPage(View):
 
 class UserTwoPage(View):
     model = State
-    template_name = 'business.html'
-    template_name = 'user.html'
+    # template_name = 'user.html'
 
     def get(self, request, *args, **kwargs):
         queryset = State.objects.all()
@@ -55,3 +57,9 @@ class UserTwoPage(View):
             'remaining' : int(ticket) - state.current,
         }
         return render(request, 'user.html', context)
+
+
+class Login(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'login.html')

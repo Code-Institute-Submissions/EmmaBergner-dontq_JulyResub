@@ -5,41 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>DontQ</title>
 </head>
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Jura&family=Varela+Round&display=swap');
-
-    body {
-        background-color: white;
-    }
-
-    h2 {
-        color: black;
-    }
-
-    h1 {
-        color: grey;
-        font-family: Varela Round, Arial;
-        font-size: 120px;
-    }
-
-    p {
-        color: black;
-    }
-</style>
-
 <body>
     <header>
-        <center>
-            <h2>Buissnes:</h2>
+  
+        <div class="logo">
+            <div id="mainLogo">Dont</div>  
+            <div id="mainLogoTwo">Q</div>
+        </div>
+    
+        <section class="login-section">
+            <form action="/action_page.php">
+                <p>
+                    <label for="business" class="aligned">Business:</label>
+                </p>
+                <p>
+                    <input type="text" id="business" namegit="business" required>
+                </p>
+                <p>
+                    <label for="username" class="aligned">Username:</label>
+                </p>
+                <p>
+                    <input type="text" id="username" name="username" required>
+                </p>
+                <p>
+                    <label for="password" class="aligned">Password:</label>
+                </p>
+                <p>
+                    <input type="text" id="password" name="password" required>
+                </p>
+                <p>
+                    <input type="submit" value="Login" class="login">
+                </p>
+            </form>
+        </section>
 
-            <p>Username:</p>
-            <p>Password:</p>
+        </div>
 
-            Login
-        </center>
     </header>
 </body>
 

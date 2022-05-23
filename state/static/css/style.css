@@ -143,3 +143,66 @@ footer {
     font-family: Merriweather, Arial;
     font-size: 13px;
 }
+
+
+/* Login form */
+
+.logo {
+    margin: auto;
+    text-align: center;
+    padding-top: 20vh;
+    float: left;
+    margin-left: 50%;
+}
+
+#mainLogo {
+    color: #F44D29;
+    font-family: Poiret One;
+    font-size: 40px;
+
+}
+
+#mainLogoTwo {
+    color: #027E88;
+    font-family: Poiret One;
+    font-size: 40px;
+
+}
+
+
+.login-section {
+    clear: both;
+    text-align: center;
+
+
+}
+
+.aligned {
+    font-family: Jura;
+    font-size: 20px;
+    /* float: left; */
+    width: 150px;
+    color: #61514B;
+    padding-right: 28%;
+}
+
+input[type=text] {
+    border: 1.5px solid #027E88;
+    background-color: #FFFFFD;
+    padding: 5px 20px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    width: 35%;
+    font-size: 16px;
+}
+
+.login {
+    font-family: Jura;
+    font-size: 20px;
+    color: #FFFFFD;
+    background-color: #027E88;
+    padding: 16px 32px;
+    margin: auto;
+    text-align: center;
+    clear: both;
+}

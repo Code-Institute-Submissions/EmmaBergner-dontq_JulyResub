@@ -151,22 +151,19 @@ footer {
     margin: auto;
     text-align: center;
     padding-top: 20vh;
-    float: left;
-    margin-left: 50%;
-}
+    margin-bottom: 10vh;
+} 
 
 #mainLogo {
     color: #F44D29;
     font-family: Poiret One;
     font-size: 40px;
-
 }
 
 #mainLogoTwo {
     color: #027E88;
     font-family: Poiret One;
     font-size: 40px;
-
 }
 
 
@@ -180,10 +177,8 @@ footer {
 .aligned {
     font-family: Jura;
     font-size: 20px;
-    /* float: left; */
-    width: 150px;
     color: #61514B;
-    padding-right: 28%;
+    padding-right: 120px;
 }
 
 input[type=text] {
@@ -192,7 +187,7 @@ input[type=text] {
     padding: 5px 20px;
     margin-bottom: 50px;
     margin-top: 10px;
-    width: 35%;
+    width: 180px;
     font-size: 16px;
 }
 
@@ -206,3 +201,5 @@ input[type=text] {
     text-align: center;
     clear: both;
 }
+
+

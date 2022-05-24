@@ -14,12 +14,12 @@
     <header>
   
         <div class="logo">
-            <div id="mainLogo">Dont</div>  
-            <div id="mainLogoTwo">Q</div>
+            <span id="mainLogo">Dont</span><span id="mainLogoTwo">Q</span>
         </div>
     
         <section class="login-section">
-            <form action="/action_page.php">
+            <form method="POST" action="">
+                {% csrf_token %}
                 <p>
                     <label for="business" class="aligned">Business:</label>
                 </p>
@@ -27,19 +27,19 @@
                     <input type="text" id="business" namegit="business" required>
                 </p>
                 <p>
-                    <label for="username" class="aligned">Username:</label>
+                    <label for="username" class="aligned"> Username:</label>
                 </p>
                 <p>
                     <input type="text" id="username" name="username" required>
                 </p>
                 <p>
-                    <label for="password" class="aligned">Password:</label>
+                    <label for="password" class="aligned"> Password:</label>
                 </p>
                 <p>
-                    <input type="text" id="password" name="password" required>
+                    <input type="password" id="password" name="password" required>
                 </p>
                 <p>
-                    <input type="submit" value="Login" class="login">
+                    <button type="submit" value="Login" class="login">
                 </p>
             </form>
         </section>

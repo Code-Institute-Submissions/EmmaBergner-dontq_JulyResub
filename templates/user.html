@@ -5,33 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2" />
+    <!-- <meta http-equiv="refresh" content="2" /> -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>DontQ</title>
 </head>
 
 <body>
     <header>
-        <!-- Top section --> 
-        <div id="logo"> Dont</div>
-        <div id="logoTwo">Q</div>
+       
+            <!-- Top section -->
+            <span id="myLogo">Dont</span><span id="myLogoTwo">Q</span>
 
-        <div class="mainText">Your Turn:</div>
+            <div class="mainText">Your Turn:</div>
 
-        <!-- Middle section -->
-        <div id="queueNumber"> {{ ticket }} </div>
+            <!-- Middle section -->
+            <div id="queueNumber"> {{ ticket }} </div>
 
- 
-        <!-- bottom section -->
-        <p>
-        <div class="currentlyText"> Current: {{ current }} </div>
-        </p>
 
-        <p>
+            <!-- bottom section -->
+            
+            <div class="currentlyText"> Current: {{ current }} </div>
+            
             <div class="currentlyText"> Remaining: {{ remaining }} </div>
-            </p>
+            
+ 
     </header>
 
     <footer>

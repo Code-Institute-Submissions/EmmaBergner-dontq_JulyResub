@@ -12,35 +12,35 @@
 
 <body>
     <header>
-  
+
         <div class="logo">
             <span id="mainLogo">Dont</span><span id="mainLogoTwo">Q</span>
         </div>
-    
+
         <section class="login-section">
             <form method="POST" action="">
                 {% csrf_token %}
-                <p>
+                <div>
                     <label for="business" class="aligned">Business:</label>
-                </p>
-                <p>
-                    <input type="text" id="business" namegit="business" required>
-                </p>
-                <p>
+                </div>
+                <div>
+                    <input type="text" id="business" name="business">
+                </div>
+                <div>
                     <label for="username" class="aligned"> Username:</label>
-                </p>
-                <p>
-                    <input type="text" id="username" name="username" required>
-                </p>
-                <p>
+                </div>
+                <div>
+                    <input type="text" id="username" name="username" value="" required>
+                </div>
+                <div>
                     <label for="password" class="aligned"> Password:</label>
-                </p>
-                <p>
+                </div>
+                <div>
                     <input type="password" id="password" name="password" required>
-                </p>
-                <p>
-                    <button type="submit" value="Login" class="login">
-                </p>
+                </div>
+                <div>
+                    <button type="submit" value="Login" class="login">Log in
+                </div>
             </form>
         </section>
 

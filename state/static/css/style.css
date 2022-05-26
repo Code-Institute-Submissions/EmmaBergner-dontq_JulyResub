@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     border: none;
+    text-align: center;
 }
 
 body {
@@ -14,29 +15,53 @@ body {
     color: #F44D29;
     font-family: Poiret One;
     font-size: 24px;
-    float: left;
-    margin-left: 5%;
+    text-align: center;
 }
 
 #logoTwo {
     color: #027E88;
     font-family: Poiret One;
     font-size: 24px;
-    float: left;
-}
-
-#menu {
-    font-family: Jura;
-    font-size: 16px;
-    color: #61514B;
-    float: right;
-    margin-right: 5%;
+    text-align: center;
 }
 
 #logo,
 #logoTwo,
-#menu {
-    line-height: 8vh;
+.logOut {
+    line-height: 10vh;
+}
+
+
+/* User Html  */  
+
+#myLogoTwo #myLogo {
+    padding-top: 20vh;
+}
+#myLogoTwo {
+   
+    color: #F44D29;
+    font-family: Poiret One;
+    font-size: 24px;
+    margin-right: 30%;
+    text-align: center;
+}
+
+#myLogo {
+    
+    color: #027E88;
+    font-family: Poiret One;
+    font-size: 24px;
+    text-align: center;
+   
+}
+
+.logOut {
+    font-family: Jura;
+    font-size: 16px;
+    color: #61514B;
+    background-color: #FFFFFD;
+    float: right;
+    margin-right: 10%;
 }
 
 .mainText {
@@ -44,7 +69,8 @@ body {
     font-size: 20px;
     font-family: Jura;
     color: #61514B;
-    margin-left: 15%;
+    margin-right: 30%;
+    text-align: center;
 }
 
 #queueNumber {
@@ -54,6 +80,7 @@ body {
     margin: auto;
     text-align: center;
     padding: 10px;
+ 
 }
 
 .prevButton {
@@ -84,8 +111,8 @@ body {
     font-size: 20px;
     font-family: Jura;
     color: #61514B;
-    margin-left: 15%;
-    margin-top: 10vh;
+    margin-right: 30%;
+    text-align: center;
 }
 
 #currentlyNumber {
@@ -98,7 +125,7 @@ body {
 }
 
 .buttonRow {
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-bottom: 15vh;
     display: flex;
     justify-content: center;
@@ -117,7 +144,7 @@ body {
 
 footer {
     height: 150px;
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 
 .socialNetwork {
@@ -145,42 +172,35 @@ footer {
 }
 
 
-/* Login form */
+/* Login html */
 
 .logo {
     margin: auto;
     text-align: center;
     padding-top: 20vh;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 } 
-
 #mainLogo {
     color: #F44D29;
     font-family: Poiret One;
     font-size: 40px;
 }
-
 #mainLogoTwo {
     color: #027E88;
     font-family: Poiret One;
     font-size: 40px;
 }
-
-
 .login-section {
     clear: both;
     text-align: center;
 
-
 }
-
 .aligned {
     font-family: Jura;
     font-size: 20px;
     color: #61514B;
     padding-right: 120px;
 }
-
 input[type=text] {
     border: 1.5px solid #027E88;
     background-color: #FFFFFD;
@@ -190,13 +210,21 @@ input[type=text] {
     width: 180px;
     font-size: 16px;
 }
-
+input[type=password] {
+    border: 1.5px solid #027E88;
+    background-color: #FFFFFD;
+    padding: 5px 20px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    width: 180px;
+    font-size: 16px;
+}
 .login {
     font-family: Jura;
     font-size: 20px;
     color: #FFFFFD;
     background-color: #027E88;
-    padding: 16px 32px;
+    padding: 16px 20px;
     margin: auto;
     text-align: center;
     clear: both;

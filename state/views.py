@@ -35,7 +35,6 @@ class ControlPage(View):
         }
         return render(request, 'business.html', context)
 
-
 class Login(View):
 
     def get(self, request, *args, **kwargs):
@@ -70,7 +69,6 @@ class UserPage(View):
 
 class UserTwoPage(View):
     model = State
-    # template_name = 'user.html'
 
     def get(self, request, *args, **kwargs):
         queryset = State.objects.all()

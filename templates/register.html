@@ -17,6 +17,9 @@
             <span id="mainLogo">Dont</span><span id="mainLogoTwo">Q</span>
         </div>
 
+        <div class="formInfo">Please fill in the form to sign up</div> 
+        <div class="joinUs">And to join DontQ</div> 
+
         <section class="login-section">
 
             {% if messages %}
@@ -26,28 +29,44 @@
                     {% endfor %}
             </ul>
             {% endif %}
+            
             <form method="POST" action="">
                 {% csrf_token %}
 
                 <div>
-                    <label for="business" class="aligned"> Business</label>
+                    <label for="business" class="aligned">Business: </label>
                 </div>
                 <div>
-                    <input type="text" id="business" name="username" value="" required>
+                    <input type="text" id="business" name="businessName" value="" required>
                 </div>
+
+                <div>
+                    <label for="business" class="aligned">Owner: </label>
+                </div>
+                <div>
+                    <input type="text" id="business" name="owner" value="" required>
+                </div>
+
                 <div>
                     <label for="password" class="aligned"> Password:</label>
                 </div>
                 <div>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="passwordOne" required>
                 </div>
                 <div>
-                    <button type="submit" value="Login" class="login">Log in
+                    <label for="password" class="aligned">Repeat Password:</label>
+                </div>
+                <div>
+                    <input type="password" id="password" name="passwordTwo" required>
+                </div>
+                <div>
+                    <button type="submit" value="register" class="login">Register
                 </div>
             </form>
-
-            <div class="noAccount">No account</div>
-            <a href="/register" <div class="register">Register Here</div> </a>
+       
+            <div class="noAccount">Have an account</div>
+            <a href="/accounts/login" <div class="register">Login Here</div> </a>  
+           
 
         </section>
 

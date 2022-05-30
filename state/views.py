@@ -67,17 +67,18 @@ class Register(View):
         passwordTwo = request.POST['passwordTwo']
         # Check password match and business does exist.
         if User.objects.filter(username=businessName).exists():
-            messages.error(request, "Business does already exist. Please log in.")
+            messages.error(
+                request, "Business does already exist. Please log in.")
             return render(request, 'register.html')
-        if not passwordOne == passwordTwo: 
-            messages.error(request, "Password does not match. Please try again.")
+        if not passwordOne == passwordTwo:
+            messages.error(
+                request, "Password does not match. Please try again.")
             return render(request, 'register.html')
         user = User.objects.create_user(username=businessName,
                                         password=passwordOne)
         State.objects.create(business=user)
         logout(request)
         return redirect('/')
-     
 
 
 class UserPage(View):
@@ -110,9 +111,14 @@ class UserTwoPage(View):
         ticket = partstwo[0]      # 46
         businessName = partstwo[1]     # Baronen
         state = get_object_or_404(State, business__username=businessName)
-        context = {
-            'current': state.current,
-            'ticket': ticket,
-            'remaining': int(ticket) - state.current,
-        }
+        context = makeContext(state.current, ticket)
         return render(request, 'user.html', context)
+
+
+def makeContext(currentInt, ticket):
+    ticketInt = int(ticket)
+    if currentInt == ticketInt:
+        return {'current': "", 'ticket': "It is your turn", 'remaining': ""}
+    current = f"Number {currentInt} is now being served and your number is:"
+    remaining = f"So there are {ticketInt - currentInt} in line before you."
+    return {'current': current, 'ticket': ticket, 'remaining': remaining}

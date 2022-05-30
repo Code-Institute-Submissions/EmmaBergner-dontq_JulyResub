@@ -4,38 +4,272 @@
     margin: 0;
     padding: 0;
     border: none;
-    /* text-align: center; */
 }
 
 body {
     background-color: #FFFFFD;
 }
 
+/* Business Html  */  
+/* Business Heading  */  
+.headLine {
+    margin-left: 70%;
+    text-align: center;
+    padding-top: 3vh;
+}
+
 #logo {
     color: #F44D29;
     font-family: Poiret One;
     font-size: 24px;
-    text-align: center;
 }
 
 #logoTwo {
     color: #027E88;
     font-family: Poiret One;
     font-size: 24px;
+
+}
+
+.logOut {
+    font-family: Jura;
+    font-size: 16px;
+    color: #61514B;
+    background-color: #FFFFFD;
+    /* margin-top: 3vh; */
+}
+
+.mainText {
+    padding-top: 15vh;
+    font-size: 20px;
+    font-family: Jura;
+    color: #61514B;
+    margin-right: 30%;
+    text-align: center;
+} 
+
+#queueNumber {
+    color: #07485A;
+    font-family: Merriweather, Arial;
+    font-size: 200px;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Button Row  */  
+
+.buttonRow {
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.prevButton {
+    font-family: Jura;
+    background-color: #FFFFFD;
+    color: #027E88;
+    border: 1px solid #027E88;
+    padding: 10px 45px;
+    text-align: center;
+    display: inline-block;
+    font-size: 64px;
+    margin: 15px;
+}
+.nextButton {
+    font-family: Jura;
+    background-color: #027E88;
+    color: #FFFFFD;
+    border: 1px solid #FFFFFD;
+    padding: 10px 45px;
+    text-align: center;
+    display: inline-block;
+    font-size: 64px;
+    margin: 15px;
+}
+.resetButton {
+    font-family: Jura;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    color: #F44D29;
+    background-color: #FFFFFD;
+}
+
+/* Login Html  */ 
+/* Login Heading  */ 
+
+.logo {
+    margin-left: 70%;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+#mainLogo {
+    color: #F44D29;
+    font-family: Poiret One;
+    font-size: 40px;
+}
+#mainLogoTwo {
+    color: #027E88;
+    font-family: Poiret One;
+    font-size: 40px;
+}
+
+.login-section {
+    clear: both;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.messages {
+    font-family: Jura;
+    font-size: 12px;
+    color: #F44D29;
+    margin-bottom: 15px;
     text-align: center;
 }
 
-#logo,
-#logoTwo,
-.logOut {
-    line-height: 10vh;
+
+.aligned {
+    font-family: Jura;
+    font-size: 20px;
+    color: #61514B;
+    padding-right: 120px;
+}
+input[type=text] {
+    border: 1.5px solid #027E88;
+    background-color: #FFFFFD;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 180px;
+    font-size: 16px;
+}
+input[type=password] {
+    border: 1.5px solid #027E88;
+    background-color: #FFFFFD;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 180px;
+    font-size: 16px;
+}
+
+.login {
+    font-family: Jura;
+    font-size: 20px;
+    color: #FFFFFD;
+    background-color: #027E88;
+    padding: 16px 20px;
+    margin: auto;
+    text-align: center;
+    clear: both;
+    margin-top: 50px;
+}
+
+.noAccount {
+    font-family: Jura;
+    font-size: 14px;
+    color: #61514B;
+    margin-top: 16px;
+}
+
+.register {
+    font-family: Jura;
+    font-size: 16px;
+    color: #61514B;
+    margin-top: 5px;
+}
+/* Register Html  */
+/* Register Heading  */
+
+.logoBig{
+    text-align: center;
+    padding-top: 15vh;
+}
+
+
+#mainLogo {
+    color: #F44D29;
+    font-family: Poiret One;
+    font-size: 40px;
+}
+#mainLogoTwo {
+    color: #027E88;
+    font-family: Poiret One;
+    font-size: 40px;
+}
+
+.formInfo {
+    font-family: Jura;
+    font-size: 14px;
+    color: #61514B;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.joinUs {
+    font-family: Jura;
+    font-size: 14px;
+    color: #61514B;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.login-section {
+    clear: both;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.messages {
+    font-family: Jura;
+    font-size: 12px;
+    color: #F44D29;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.aligned {
+    font-family: Jura;
+    font-size: 20px;
+    color: #61514B;
+    padding-right: 120px;
+}
+.noAccount {
+    font-family: Jura;
+    font-size: 14px;
+    color: #61514B;
+    margin-top: 16px;
+}
+
+.register {
+    font-family: Jura;
+    font-size: 16px;
+    color: #61514B;
+    margin-top: 5px;
 }
 
 
 /* User Html  */  
-
-#myLogoTwo #myLogo {
-    padding-top: 20vh;
+/* User Heading  */  
+.headLine {
+    margin-left: 70%;
+    text-align: center;
+    padding-top: 3vh;
+}
+#myLogo {
+    
+    color: #027E88;
+    font-family: Poiret One;
+    font-size: 24px;
+    text-align: center;
+   
 }
 #myLogoTwo {
    
@@ -46,26 +280,8 @@ body {
     text-align: center;
 }
 
-#myLogo {
-    
-    color: #027E88;
-    font-family: Poiret One;
-    font-size: 24px;
-    text-align: center;
-   
-}
-
-.logOut {
-    font-family: Jura;
-    font-size: 16px;
-    color: #61514B;
-    background-color: #FFFFFD;
-    float: right;
-    margin-right: 10%;
-}
-
-.mainText {
-    padding-top: 20vh;
+.currentlyText {
+    padding-top: 15vh;
     font-size: 20px;
     font-family: Jura;
     color: #61514B;
@@ -83,64 +299,13 @@ body {
  
 }
 
-.prevButton {
-    font-family: Jura;
-    background-color: #FFFFFD;
-    color: #027E88;
-    border: 1px solid #027E88;
-    padding: 10px 45px;
-    text-align: center;
-    display: inline-block;
-    font-size: 64px;
-    margin: 15px;
-}
-
-.nextButton {
-    font-family: Jura;
-    background-color: #027E88;
-    color: #FFFFFD;
-    border: 1px solid #FFFFFD;
-    padding: 10px 45px;
-    text-align: center;
-    display: inline-block;
-    font-size: 64px;
-    margin: 15px;
-}
-
-.currentlyText {
-    font-size: 20px;
-    font-family: Jura;
-    color: #61514B;
-    margin-right: 30%;
-    text-align: center;
-}
-
-#currentlyNumber {
-    color: #07485A;
-    font-family: Merriweather, Arial;
-    font-size: 20px;
-    margin: auto;
-    text-align: center;
-    padding: 10px;
-}
-
 .buttonRow {
     margin-top: 5vh;
     margin-bottom: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.resetButton {
-    font-family: Jura;
-    display: flex;
-    font-size: 16px;
-    justify-content: center;
-    align-items: center;
-    color: #F44D29;
-    background-color: #FFFFFD;
-}
+} 
 
 footer {
     height: 150px;
@@ -172,101 +337,4 @@ footer {
 }
 
 
-/* Login html */
 
-.logo {
-    margin: auto;
-    text-align: center;
-    padding-top: 20vh;
-    /* margin-bottom: 5vh; */
-} 
-#mainLogo {
-    color: #F44D29;
-    font-family: Poiret One;
-    font-size: 40px;
-}
-#mainLogoTwo {
-    color: #027E88;
-    font-family: Poiret One;
-    font-size: 40px;
-}
-.login-section {
-    clear: both;
-    text-align: center;
-    margin-top: 50px;
-
-}
-.aligned {
-    font-family: Jura;
-    font-size: 20px;
-    color: #61514B;
-    padding-right: 120px;
-}
-input[type=text] {
-    border: 1.5px solid #027E88;
-    background-color: #FFFFFD;
-    padding: 5px 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    width: 180px;
-    font-size: 16px;
-}
-input[type=password] {
-    border: 1.5px solid #027E88;
-    background-color: #FFFFFD;
-    padding: 5px 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    width: 180px;
-    font-size: 16px;
-}
-.login {
-    font-family: Jura;
-    font-size: 20px;
-    color: #FFFFFD;
-    background-color: #027E88;
-    padding: 16px 20px;
-    margin: auto;
-    text-align: center;
-    clear: both;
-    margin-top: 50px;
-}
-
-
-.noAccount {
-    font-family: Jura;
-    font-size: 14px;
-    color: #61514B;
-    margin-top: 16px;
-}
-
-.register {
-    font-family: Jura;
-    font-size: 16px;
-    color: #61514B;
-    margin-top: 5px;
-}
-
-.formInfo {
-    font-family: Jura;
-    font-size: 14px;
-    color: #61514B;
-    margin-top: 16px;
-    text-align: center;
-}
-
-.joinUs {
-    font-family: Jura;
-    font-size: 14px;
-    color: #61514B;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-.messages {
-    font-family: Jura;
-    font-size: 12px;
-    color: #61514B;
-    margin-bottom: 15px;
-    text-align: center;
-}

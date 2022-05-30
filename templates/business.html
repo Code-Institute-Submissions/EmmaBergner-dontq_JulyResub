@@ -6,20 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>DontQ</title>
 </head>
 
 <body>
     <header>
         <!-- Top section -->
-        <div id="logo"> Dont</div>
-        <div id="logoTwo">Q</div>
-        <form action="#" method="get">
-            <input type="submit" class="logOut" value="LogOut" name="mylogout">  
-            {% csrf_token %}
-        </form>
 
+        <div class="headLine">
+            <span id="logo">Dont</span><span id="logoTwo">Q</span>
+
+
+            <form action="#" method="get">
+                <input type="submit" class="logOut" value="LogOut" name="mylogout">
+                {% csrf_token %}
+            </form>
+        </div>
+        
         <div class="mainText">Currently:</div>
 
         <!-- Middle section -->
@@ -29,12 +33,12 @@
         <!-- bottom section -->
         <div class="buttonRow">
             <form action="#" method="get">
-                <input type="submit" class="prevButton" value="&lt;" name="mybtn">  
+                <input type="submit" class="prevButton" value="&lt;" name="mybtn">
                 {% csrf_token %}
             </form>
 
             <form action="#" method="get">
-                <input type="submit" class="nextButton" value="&gt;" name="mybtng"> 
+                <input type="submit" class="nextButton" value="&gt;" name="mybtng">
                 {% csrf_token %}
             </form>
         </div>
@@ -42,12 +46,13 @@
         <p>
         <div class="buttonRow">
             <form action="#" method="get">
-            <input type="submit" class="resetButton" value="Reset" name="myreset">
-            {% csrf_token %}
+                <input type="submit" class="resetButton" value="Reset" name="myreset">
+                {% csrf_token %}
             </form>
         </div>
         </p>
 
     </header>
 </body>
+
 </html>

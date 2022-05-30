@@ -9,6 +9,30 @@
 body {
     background-color: #FFFFFD;
 }
+#frameOne {
+    border: 1px solid #027E88;
+    height: 75vh;
+    width: 92%;
+    margin-left: 14px;
+    margin-top: 20px;
+}
+
+ #frameTwo {
+    border: 1px solid #F44D29;
+    width: 90%;
+    margin: auto;
+    height: 60vh;
+}
+
+
+/* #frameThree {
+    border: 2px solid #027E88;
+    height: 8vh;
+    width: 96%;
+    margin: auto;
+    margin-top: 51%;
+
+}  */
 
 /* Business Html  */  
 /* Business Heading  */  
@@ -288,6 +312,14 @@ input[type=password] {
     margin-right: 30%;
     text-align: center;
 }
+.mainTextTwo {
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+    font-size: 20px;
+    font-family: Jura;
+    color: #61514B;
+    text-align: center;
+} 
 
 #queueNumber {
     color: #07485A;
@@ -299,17 +331,30 @@ input[type=password] {
  
 }
 
-.buttonRow {
+.leftNumber {
+    font-size: 20px;
+    font-family: Jura;
+    color: #61514B;
+    /* margin-right: 30%; */
+    text-align: center;
+    margin-top: 2vh;
+    /* margin-bottom: 15vh;
+    align-items: center; */
+  
+}
+
+
+/* .buttonRow {
     margin-top: 5vh;
     margin-bottom: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}  */
 
 footer {
-    height: 150px;
-    margin-top: 10vh;
+    height: 100px;
+    margin-top: 20vh;
 }
 
 .socialNetwork {
@@ -321,7 +366,7 @@ footer {
 }
 
 .socialNetwork i {
-    font-size: 20px;
+    font-size: 14px;
     padding: 1%;
     color: #61514B;
     background-color: #FFFFFD;
@@ -330,7 +375,7 @@ footer {
 .copyRight {
     margin: auto;
     text-align: center;
-    padding: 9px;
+    padding: 5px;
     color: #61514B;
     font-family: Merriweather, Arial;
     font-size: 13px;

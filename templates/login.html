@@ -7,10 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>DontQ</title>
 </head>
 
 <body>
+
+
     <header>
 
         <div class="logoBig">
@@ -23,7 +30,7 @@
             <ul class="messages">
                 {% for message in messages %}
                 <li>{{ message }}</li>
-                    {% endfor %}
+                {% endfor %}
             </ul>
             {% endif %}
             <form method="POST" action="">
@@ -49,11 +56,47 @@
             <div class="noAccount">No account</div>
             <a href="/register" <div class="register">Register Here</div> </a>
 
+            <!-- <div class="info">
+                <a href="/register" <div class="register">What we do <i class="fa fa-info-circle"
+                        aria-hidden="true"></i>
+            </div> </a> -->
+
+
+            </div>
+
+
         </section>
 
         </div>
 
     </header>
+
+    <div
+        onclick="functionAlert('We give you your queing number straight in your phone. When entering the store, by scanning a QR-code you will automatically receive your queing number. You will be updated on current number, remaining queuing numbers  and when it is your turn. We skip the printed number tickets and everything is online')">
+        <div class="register">What we do <i class="fa fa-info-circle" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="info">
+        <div id="confirm">
+            <button class="yes"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+            <div class="message">
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#confirm").hide();
+        function functionAlert(msg) {
+            var confirmBox = $("#confirm");
+            confirmBox.find(".message").text(msg);
+            var myYes = confirmBox.find(".yes");
+            myYes.on('click', function () {
+                confirmBox.hide();
+            });
+            //myYes.click(myYes);
+            confirmBox.show();
+        }
+    </script>
+
 </body>
 
 

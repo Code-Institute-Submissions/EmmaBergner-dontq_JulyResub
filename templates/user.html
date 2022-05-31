@@ -14,50 +14,54 @@
 
 <body>
     <header>
+        <div id="holePage">
+            <!-- Top section -->
 
-        <!-- Top section -->
-
-        <div class="headLine">
-            <span id="logo">Dont</span><span id="logoTwo">Q</span>
-        </div>
-        <div id="frameOne">
+            <div class="headLine">
+                <span id="logo">Dont</span><span id="logoTwo">Q</span>
+            </div>
             <div class="mainTextTwo">{{ current }} </div>
 
             <!-- Middle section -->
-            <div id="frameTwo">
-                <div id="queueNumber">{{ ticket }} </div>
-                <div id="frameThree">
-                    <footer>
-                        <ul class="socialNetwork">
-                            <li>
-                                <a href="https://twitter.com" target="_blank" rel="noopener"
-                                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa fa-twitter"
-                                        aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://youtube.com" target="_blank" rel="noopener"
-                                    aria-label="Visit our YouTube page (opens in a new tab)"><i class="fa fa-facebook"
-                                        aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://instagram.com" target="_blank" rel="noopener"
-                                    aria-label="Visit our Instagram page (opens in a new tab)"><i
-                                        class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                        <div class="copyRight">&copy; Copyright 2022: DontQ </div>
+            <div class="mainTextTwo"> {{ticketText}}</div>
+            <div id="queueNumber">{{ ticket }} </div>
+        </div>
+        </div>
 
-                    </footer>
-                </div>
-                </div>
-                <!-- bottom section -->
+        <p> _______________________</p>
+        <!-- bottom section -->
 
-                <div class="leftNumber">{{ remaining }} </div>
-            </div>
+        <div class="leftNumber"> {{ remaining }} </div>
+        </div>
 
+        </div>
     </header>
 
+    <div class="footerImage">
+        <img src="static/images/queue.png" alt="people queing">
+    </div>
+    <footer>
+        <ul class="socialNetwork">
+            <li>
+                <a href="https://twitter.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa fa-twitter"
+                        aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://youtube.com" target="_blank" rel="noopener"
+                    aria-label="Visit our YouTube page (opens in a new tab)"><i class="fa fa-facebook"
+                        aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+        <div class="copyRight">&copy; Copyright 2022: DontQ </div>
 
+
+
+    </footer>
 
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>

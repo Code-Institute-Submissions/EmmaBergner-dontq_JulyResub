@@ -9,33 +9,10 @@
 body {
     background-color: #FFFFFD;
 }
-#frameOne {
-    border: 1px solid #027E88;
-    height: 75vh;
-    width: 92%;
-    margin-left: 14px;
-    margin-top: 20px;
-}
-
- #frameTwo {
-    border: 1px solid #F44D29;
-    width: 90%;
-    margin: auto;
-    height: 60vh;
-}
 
 
-/* #frameThree {
-    border: 2px solid #027E88;
-    height: 8vh;
-    width: 96%;
-    margin: auto;
-    margin-top: 51%;
-
-}  */
-
-/* Business Html  */  
-/* Business Heading  */  
+/* Business Html  */
+/* Business Heading  */
 .headLine {
     margin-left: 70%;
     text-align: center;
@@ -70,7 +47,7 @@ body {
     color: #61514B;
     margin-right: 30%;
     text-align: center;
-} 
+}
 
 #queueNumber {
     color: #07485A;
@@ -81,7 +58,7 @@ body {
     padding: 10px;
 }
 
-/* Button Row  */  
+/* Button Row  */
 
 .buttonRow {
     margin-top: 5vh;
@@ -89,7 +66,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
+
 .prevButton {
     font-family: Jura;
     background-color: #FFFFFD;
@@ -101,6 +79,7 @@ body {
     font-size: 64px;
     margin: 15px;
 }
+
 .nextButton {
     font-family: Jura;
     background-color: #027E88;
@@ -112,6 +91,7 @@ body {
     font-size: 64px;
     margin: 15px;
 }
+
 .resetButton {
     font-family: Jura;
     display: flex;
@@ -122,8 +102,8 @@ body {
     background-color: #FFFFFD;
 }
 
-/* Login Html  */ 
-/* Login Heading  */ 
+/* Login Html  */
+/* Login Heading  */
 
 .logo {
     margin-left: 70%;
@@ -136,6 +116,7 @@ body {
     font-family: Poiret One;
     font-size: 40px;
 }
+
 #mainLogoTwo {
     color: #027E88;
     font-family: Poiret One;
@@ -164,6 +145,7 @@ body {
     color: #61514B;
     padding-right: 120px;
 }
+
 input[type=text] {
     border: 1.5px solid #027E88;
     background-color: #FFFFFD;
@@ -173,6 +155,7 @@ input[type=text] {
     width: 180px;
     font-size: 16px;
 }
+
 input[type=password] {
     border: 1.5px solid #027E88;
     background-color: #FFFFFD;
@@ -207,11 +190,52 @@ input[type=password] {
     font-size: 16px;
     color: #61514B;
     margin-top: 5px;
+    text-align: center;
 }
+
+
+/* POP UP BOX */
+
+#confirm {
+    display: none;
+    background-color: #FFFFFD;
+    color: #61514B;
+    top: 21%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #027E88;
+    height: 320px;
+    width: 240px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#confirm button {
+    padding: 5px;
+    position: relative;
+    transform: translate(-50%, 0%);
+    background-color: #FFFFFD;
+    color: #61514B;
+    left: inherit;
+    font-family: Jura;
+    font-size: 16px;
+}
+
+
+#confirm .message {
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    font-family: Jura;
+}
+
+
 /* Register Html  */
 /* Register Heading  */
 
-.logoBig{
+.logoBig {
     text-align: center;
     padding-top: 15vh;
 }
@@ -222,6 +246,7 @@ input[type=password] {
     font-family: Poiret One;
     font-size: 40px;
 }
+
 #mainLogoTwo {
     color: #027E88;
     font-family: Poiret One;
@@ -265,6 +290,7 @@ input[type=password] {
     color: #61514B;
     padding-right: 120px;
 }
+
 .noAccount {
     font-family: Jura;
     font-size: 14px;
@@ -280,23 +306,25 @@ input[type=password] {
 }
 
 
-/* User Html  */  
-/* User Heading  */  
-.headLine {
+/* User Html  */
+/* User Heading  */
+
+/* .headLine {
     margin-left: 70%;
     text-align: center;
     padding-top: 3vh;
-}
+} */
 #myLogo {
-    
+
     color: #027E88;
     font-family: Poiret One;
     font-size: 24px;
     text-align: center;
-   
+
 }
+
 #myLogoTwo {
-   
+
     color: #F44D29;
     font-family: Poiret One;
     font-size: 24px;
@@ -312,6 +340,7 @@ input[type=password] {
     margin-right: 30%;
     text-align: center;
 }
+
 .mainTextTwo {
     padding-top: 2vh;
     padding-bottom: 4vh;
@@ -319,7 +348,7 @@ input[type=password] {
     font-family: Jura;
     color: #61514B;
     text-align: center;
-} 
+}
 
 #queueNumber {
     color: #07485A;
@@ -328,7 +357,7 @@ input[type=password] {
     margin: auto;
     text-align: center;
     padding: 10px;
- 
+
 }
 
 .leftNumber {
@@ -340,7 +369,7 @@ input[type=password] {
     margin-top: 2vh;
     /* margin-bottom: 15vh;
     align-items: center; */
-  
+
 }
 
 
@@ -354,7 +383,7 @@ input[type=password] {
 
 footer {
     height: 100px;
-    margin-top: 20vh;
+    margin-top: 75vh;
 }
 
 .socialNetwork {
@@ -382,4 +411,38 @@ footer {
 }
 
 
+.footerImage {
+    width: 100%;
+    height: 20px;
+}
 
+.info {
+    font-family: Merriweather, Arial;
+    font-size: 14px;
+    /* position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 400px;
+    left: 50%;
+    transform: translate(-50%, 0%); */
+}
+
+
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+        width: 50%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 50%;
+    }
+}

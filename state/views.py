@@ -120,6 +120,14 @@ def makeContext(currentInt, ticket):
     if currentInt == ticketInt:
         return {'current': "", 'ticket': "It is your turn", 'remaining': ""}
     current = f"We are helping number {currentInt}"
-    # ticket = f"Your number is: {ticket} "
-    remaining = f"So there are {ticketInt - currentInt} person before you."
-    return {'current': current, 'ticket': ticket, 'remaining': remaining}
+    ticketText = f"Your number is:"
+    ticket = f"{ticketInt} "
+    remaining = f"So {ticketInt - currentInt} is in line before you."
+    return {'current': current, 'ticketText' : ticketText, 'ticket': ticketInt, 'remaining': remaining}
+
+
+
+
+    # Now there is less then 10 people before you
+    # You only have 5 people in line before you
+    

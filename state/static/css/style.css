@@ -31,28 +31,42 @@ body {
     font-size: 24px;
 
 }
+
 #urlInfo {
-    margin-left: 45%;
+    margin-left: 40%;
 }
+
+
+/* FOOTER TRY */ 
 
 .footLine {
-    margin-left: 5%;
     text-align: center;
-    padding-bottom: 3vh;
-}
-
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+} 
 
 #businessLogo {
-    text-transform: uppercase;
-} 
+    color: #F44D29;
+    font-family: Poiret One;
+    font-size: 24px;
+    
+}
+
+#log {
+    margin-left: 41%;
+    display: inline-block;
+}
 
 .logOut {
     font-family: Jura;
     font-size: 16px;
     color: #61514B;
     background-color: #FFFFFD;
-    margin-left: 65%;
-} 
+    margin-left: 30%;
+}
 
 .mainText {
     padding-top: 10%;
@@ -76,7 +90,7 @@ body {
 
 .buttonRow {
     margin-top: 10%;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,11 +342,12 @@ input[type=password] {
 /* User Html  */
 /* User Heading  */
 
-/* .headLine {
-    margin-left: 70%;
-    text-align: center;
+.logoLine {
+    margin-left: 5%;
+    /* text-align: center; */
     padding-top: 3vh;
-} */
+}
+
 #myLogo {
 
     color: #027E88;
@@ -360,49 +375,54 @@ input[type=password] {
     text-align: center;
 }
 
-.mainTextTwo {
-    padding-top: 2vh;
-    padding-bottom: 4vh;
+.textOne {
+    padding-top: 5vh;
+    padding-bottom: 1vh;
     font-size: 20px;
     font-family: Jura;
     color: #61514B;
-    text-align: center;
+    /* text-align: center; */
+    margin-left: 70px;
 }
 
-#queueNumber {
+.textTwo {
+    /* padding-top: 2vh;
+    padding-bottom: 4vh; */
+    font-size: 20px;
+    font-family: Jura;
+    color: #61514B;
+    /* text-align: center; */
+    margin-left: 70px;
+}
+
+#textThree {
     color: #07485A;
     font-family: Merriweather, Arial;
-    font-size: 200px;
+    font-size: 150px;
     margin: auto;
     text-align: center;
     padding: 10px;
 
 }
 
-.leftNumber {
+.textFour {
     font-size: 20px;
     font-family: Jura;
     color: #61514B;
-    /* margin-right: 30%; */
     text-align: center;
     margin-top: 2vh;
-    /* margin-bottom: 15vh;
-    align-items: center; */
+    margin-bottom: 4vh;
+    /* align-items: center;  */
 
 }
 
 
-/* .buttonRow {
-    margin-top: 5vh;
-    margin-bottom: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}  */
-
 footer {
-    height: 100px;
-    margin-top: 75vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
 }
 
 .socialNetwork {
@@ -431,8 +451,9 @@ footer {
 
 
 .footerImage {
-    width: 100%;
-    height: 20px;
+    width: 20%;
+    height: 10px;
+    text-align: center;
 }
 
 .info {
@@ -448,10 +469,11 @@ footer {
 
 
 p {
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-name: slidein;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    text-align: center;
 }
 
 @keyframes slidein {

@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
     <title>DontQ</title>
 </head>
 
@@ -15,15 +21,44 @@
         <!-- Top section -->
 
         <div class="headLine">
-            <span id="logo">Dont</span><span id="logoTwo">Q</span>
-
-
-            <form action="#" method="get">
-                <input type="submit" class="logOut" value="LogOut" name="mylogout">
-                {% csrf_token %}
-            </form>
+            <span id="logo">Dont</span>
+            <span id="logoTwo">Q</span>
+            <span id="urlInfo" onclick="{{ userurl }}">
+                <span class="urlInfo">Users URL <i class="fa fa-qrcode" aria-hidden="true"></i>
+                </span>
+            </span>
+            <!-- <span id="urlInfo">User URL</span> -->
         </div>
-        
+        <div class="info">
+            <div id="confirm">
+                <button class="yes"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                <div class="message"></div>
+                <div id="qrcode"></div>
+            </div>
+        </div>
+        <script>
+            $("#confirm").hide();
+            function functionAlert(msg) {
+                var confirmBox = $("#confirm");
+                confirmBox.find(".message").text(msg);
+                //new QRCode(document.getElementById("qrcode"), msg);
+                document.getElementById("qrcode").innerHTML = ""
+                new QRCode(document.getElementById("qrcode"), {
+                    text: msg,
+                    width: 100,
+                    height: 100,
+                    colorDark: "#61514B",
+                    colorLight: "#fffffd",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+                var myYes = confirmBox.find(".yes");
+                myYes.on('click', function () {
+                    confirmBox.hide();
+                });
+                //myYes.click(myYes);
+                confirmBox.show();
+            }
+        </script>
         <div class="mainText">Currently:</div>
 
         <!-- Middle section -->
@@ -52,6 +87,16 @@
         </div>
         </p>
 
+        <div class="footLine">
+            <span id="businessLogo">Business - Name</span>
+
+            <span id="log">
+                <form action="#" method="get">
+                    <input type="submit" class="logOut" value="LogOut" name="mylogout">
+                    {% csrf_token %}
+                </form>
+            </span>
+        </div>
     </header>
 </body>
 

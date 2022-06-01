@@ -14,7 +14,7 @@ body {
 /* Business Html  */
 /* Business Heading  */
 .headLine {
-    margin-left: 70%;
+    margin-left: 5%;
     text-align: center;
     padding-top: 3vh;
 }
@@ -31,17 +31,31 @@ body {
     font-size: 24px;
 
 }
+#urlInfo {
+    margin-left: 45%;
+}
+
+.footLine {
+    margin-left: 5%;
+    text-align: center;
+    padding-bottom: 3vh;
+}
+
+
+#businessLogo {
+    text-transform: uppercase;
+} 
 
 .logOut {
     font-family: Jura;
     font-size: 16px;
     color: #61514B;
     background-color: #FFFFFD;
-    /* margin-top: 3vh; */
-}
+    margin-left: 65%;
+} 
 
 .mainText {
-    padding-top: 15vh;
+    padding-top: 10%;
     font-size: 20px;
     font-family: Jura;
     color: #61514B;
@@ -61,8 +75,8 @@ body {
 /* Button Row  */
 
 .buttonRow {
-    margin-top: 5vh;
-    margin-bottom: 15vh;
+    margin-top: 10%;
+    margin-bottom: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,6 +245,11 @@ input[type=password] {
     font-family: Jura;
 }
 
+#confirm #qrcode {
+    padding-left: 70px;
+    text-align: center;
+    position: relative;
+}
 
 /* Register Html  */
 /* Register Heading  */

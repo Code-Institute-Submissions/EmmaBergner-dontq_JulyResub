@@ -30,8 +30,12 @@ class ControlPage(View):
             logout(request)
             return redirect('/')
         state.save()
+        # URL, for example: .../user?baronen
+        url = 'https://8000-emmabergner-dontq-zj38f323g5o.ws-eu46.gitpod.io'
+
+        url_pop_up_text = f"{url}/user?{state.business}"
         context = {
-            'current': state.current
+            'current': state.current, 'userurl' : f"functionAlert('{url_pop_up_text}')"
         }
         return render(request, 'business.html', context)
 

@@ -35,7 +35,9 @@ class ControlPage(View):
 
         url_pop_up_text = f"{url}/user?{state.business}"
         context = {
-            'current': state.current, 'userurl' : f"functionAlert('{url_pop_up_text}')"
+            'current': state.current, 
+            'userurl' : f"functionAlert('{url_pop_up_text}')", 
+            'businessname' : state.business 
         }
         return render(request, 'business.html', context)
 
@@ -123,10 +125,14 @@ def makeContext(currentInt, ticket):
     ticketInt = int(ticket)
     if currentInt == ticketInt:
         return {'current': "", 'ticket': "It is your turn", 'remaining': ""}
+    if ticketInt - currentInt < 0 : 
+        return {'current': "", 'ticket': "You missed your turn", 'remaining': ""}
     current = f"We are helping number {currentInt}"
+    if currentInt == 0:
+        current = f"We are just about to open."
     ticketText = f"Your number is:"
     ticket = f"{ticketInt} "
-    remaining = f"So {ticketInt - currentInt} is in line before you."
+    remaining = f"So {ticketInt - currentInt} are in line before you."
     return {'current': current, 'ticketText' : ticketText, 'ticket': ticketInt, 'remaining': remaining}
 
 

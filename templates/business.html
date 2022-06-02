@@ -32,19 +32,25 @@
         <div class="info">
             <div id="confirm">
                 <button class="yes"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
-                <div class="message"></div>
+                <div class="message">For your clients to receive tickets, they need to load the 
+                    below URL. An easy way to achive this is to place a copy of the OR code in your shop.
+                </div>
                 <div id="qrcode"></div>
+                <div class="url">
+
+                    
+                </div>
             </div>
         </div>
         <script>
             $("#confirm").hide();
-            function functionAlert(msg) {
+            function functionAlert(url) {
                 var confirmBox = $("#confirm");
-                confirmBox.find(".message").text(msg);
-                //new QRCode(document.getElementById("qrcode"), msg);
+                confirmBox.find(".url").text(url);
+                //new QRCode(document.getElementById("qrcode"), url);
                 document.getElementById("qrcode").innerHTML = ""
                 new QRCode(document.getElementById("qrcode"), {
-                    text: msg,
+                    text: url,
                     width: 100,
                     height: 100,
                     colorDark: "#61514B",
@@ -88,7 +94,7 @@
     
 
         <div class="footLine">
-            <span id="businessLogo">business</span>
+            <span id="businessLogo">{{businessname}}</span>
             <span id="log">
                 <form action="#" method="get">
                     <input type="submit" class="logOut" value="LogOut" name="mylogout">

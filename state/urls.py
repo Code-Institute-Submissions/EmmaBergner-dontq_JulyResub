@@ -8,4 +8,5 @@ urlpatterns = [
     path('usertwo', views.UserTwoPage.as_view(), name="User"),
     path('accounts/login/', views.Login.as_view(), name="Login"),
     path('register', views.Register.as_view(), name="Register"),
+    path('update', views.Update.as_view(), name="Update"),
 ]

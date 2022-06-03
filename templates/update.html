@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>DontQ</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="logoBig">
+            <span id="mainLogo">Dont</span><span id="mainLogoTwo">Q</span>
+        </div>
+
+        <div class="formInfo">Please fill in the form to sign up</div> 
+        <div class="joinUs">And to join DontQ</div> 
+
+        <section class="login-section">
+
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                    {% endfor %}
+            </ul>
+            {% endif %}
+            
+            <form method="POST" action="">
+                {% csrf_token %}
+
+                <div>
+                    <label for="business" class="aligned">Contact Email: </label>
+                </div>
+                <div>
+                    <input type="text" id="business" name="owner" value="{{contactEmail}}" required>
+                </div>
+
+                <div>
+                    <label for="password" class="aligned"> Password:</label>
+                </div>
+                <div> 
+                    <input type="password" id="password" name="passwordOne">
+                </div>
+                <div>
+                    <label for="password" class="aligned">Repeat Password:</label>
+                </div>
+                <div>
+                    <input type="password" id="password" name="passwordTwo">
+                </div>
+                <div>
+                    <button type="submit" value="update" class="login">Save
+                </div>
+            </form>
+    
+           
+
+        </section>
+
+        </div>
+
+    </header>
+</body>
+
+
+</html>

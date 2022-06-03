@@ -86,6 +86,31 @@ class Register(View):
         logout(request)
         return redirect('/')
 
+class Update(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'update.html', makeUpdateContext(request.user))
+
+    def post(self, request, *args, **kwargs):
+        businessName = request.POST['businessName']
+        owner = request.POST['owner']
+        passwordOne = request.POST['passwordOne']
+        passwordTwo = request.POST['passwordTwo']
+        # Check password match and business does exist.
+        if User.objects.filter(username=businessName).exists():
+            messages.error(
+                request, "Business does already exist. Please log in.")
+            return render(request, 'register.html')
+        if not passwordOne == passwordTwo:
+            messages.error(
+                request, "Password does not match. Please try again.")
+            return render(request, 'update.html')
+        User.objects.update_user(username=businessName)
+        return redirect('/')
+ 
+
+def makeUpdateContext(user):
+    return {'businessName': user.username, 'contactEmail' : "emma@bergner.se"}
+
 
 class UserPage(View):
     model = State

@@ -37,6 +37,7 @@ body {
     margin-left: 25%;
     font-family: 'Jura';
     font-size: 16px;
+    color: #027E88;
 }
 
 
@@ -80,7 +81,7 @@ body {
     background-color: #FFFFFD;
     margin-left: 25%;
     color: #027E88;
-    border: 1px solid #027E88;
+    /*border: 1px solid #027E88; */
     padding: 3px 6px;
 }
 

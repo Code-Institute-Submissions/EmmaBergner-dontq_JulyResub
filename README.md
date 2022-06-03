@@ -28,6 +28,15 @@ __Superuser / Admin__
 
 
 ## Features
+How do use the application
+- The login page is the home page for businesses using the application. From there you can, get more information about what DontQ, register a new business and sign in. 
+
+- The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will recireceive an error message guiding them to login.  
+
+- The business page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For your clients to receive tickets, they need to load the below URL. An easy way to achieve this is to place a copy of the OR code in your shop.
+
+- The user page is where users see their individual queueing ticket. By scaning the QR code in the shop. This is where they will be updated on the current and remaining queue number. 
+
 ### Login Page
 Home Page
 ![Login Page](state/static/images/login-page.png)
@@ -60,31 +69,30 @@ Password don't match
 ### User Page 
 
 
-### Business Page
 
+### Business Page
 
 
 
 ### Future Features
 I would like to add: 
+- Estimated waiting time.
+- Cancellation option.
+- Skip my turn and let person behind go before my turn. 
 
-- The users will be able to decide on “respons-time”
-- Skip my turn and lets next person go before my turn. 
-- What is the current queue time at the moment 
-- How many are in the queue for me
-- Estimated waiting time 
-- Cancellation
 
 ## Design  
 
 __Color Scheme__
 
 I wanted to keep the color scheme simple for this project so I chose colors that work nicley together. Two dark colors, two light colors and one pop color.
-
-__Typography__
+![Color Scheme](state/static/images/color-scheme.png)
 
 __Wireframes__
 
+Wireframes were created used Figma. 
+
+![Wireframe](state/static/images/wireframe.png)
 ## Databases
 
 

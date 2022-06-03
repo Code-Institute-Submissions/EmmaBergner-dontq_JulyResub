@@ -17,8 +17,8 @@
             <span id="mainLogo">Dont</span><span id="mainLogoTwo">Q</span>
         </div>
 
-        <div class="formInfo">Please fill in the form to sign up</div> 
-        <div class="joinUs">And to join DontQ</div> 
+        <div class="formInfo">To chanege email or password</div> 
+        <div class="joinUs">Type in an new and click save</div> 
 
         <section class="login-section">
 
@@ -57,7 +57,12 @@
                 </div>
             </form>
     
-           
+            <div class="buttonRow">
+                <form action="#" method="GET">
+                    <input type="submit" class="resetButton" value="Delete Account" name="delete">
+                    {% csrf_token %}
+                </form>
+            </div>
 
         </section>
 

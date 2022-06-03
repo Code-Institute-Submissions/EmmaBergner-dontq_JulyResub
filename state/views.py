@@ -35,9 +35,9 @@ class ControlPage(View):
 
         url_pop_up_text = f"{url}/user?{state.business}"
         context = {
-            'current': state.current, 
-            'userurl' : f"functionAlert('{url_pop_up_text}')", 
-            'businessname' : state.business 
+            'current': state.current,
+            'userurl': f"functionAlert('{url_pop_up_text}')",
+            'businessname': state.business
         }
         return render(request, 'business.html', context)
 
@@ -68,7 +68,7 @@ class Register(View):
 
     def post(self, request, *args, **kwargs):
         businessName = request.POST['businessName']
-        owner = request.POST['owner']
+        email = request.POST['owner']
         passwordOne = request.POST['passwordOne']
         passwordTwo = request.POST['passwordTwo']
         # Check password match and business does exist.
@@ -81,35 +81,39 @@ class Register(View):
                 request, "Password does not match. Please try again.")
             return render(request, 'register.html')
         user = User.objects.create_user(username=businessName,
-                                        password=passwordOne)
+                                        password=passwordOne,
+                                        email=email)
         State.objects.create(business=user)
         logout(request)
         return redirect('/')
 
+ 
 class Update(View):
     def get(self, request, *args, **kwargs):
+        if (request.GET.get('delete')):
+            user = User.objects.get(username=request.user.username)
+            user.delete()
+            return redirect('/')
         return render(request, 'update.html', makeUpdateContext(request.user))
 
     def post(self, request, *args, **kwargs):
-        businessName = request.POST['businessName']
-        owner = request.POST['owner']
+        email = request.POST['owner']
         passwordOne = request.POST['passwordOne']
         passwordTwo = request.POST['passwordTwo']
         # Check password match and business does exist.
-        if User.objects.filter(username=businessName).exists():
-            messages.error(
-                request, "Business does already exist. Please log in.")
-            return render(request, 'register.html')
         if not passwordOne == passwordTwo:
             messages.error(
                 request, "Password does not match. Please try again.")
             return render(request, 'update.html')
-        User.objects.update_user(username=businessName)
+        # User.objects.update_user(username=businessName, email=email)
+        u =request.user
+        u.email = email
+        u.save()
         return redirect('/')
  
 
 def makeUpdateContext(user):
-    return {'businessName': user.username, 'contactEmail' : "emma@bergner.se"}
+    return {'businessName': user.username, 'contactEmail' : user.email}
 
 
 class UserPage(View):

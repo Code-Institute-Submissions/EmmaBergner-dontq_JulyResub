@@ -9,15 +9,19 @@
 body {
     background-color: #FFFFFD;
 }
-
+.background {
+    background: url(../images/image.png) no-repeat center bottom;
+    background-attachment: fixed; 
+}
+ 
 
 /* Business Html  */
-/* Business Heading  */
 .headLine {
     position: relative;
     left: 50%;
     transform: translate(-150px);
     padding-top: 3vh;
+    width: 300px;
 }
 
 #logo {
@@ -34,65 +38,39 @@ body {
 }
 
 #urlInfo {
-    margin-left: 25%;
+    margin-left: 2%;
     font-family: 'Jura';
-    font-size: 16px;
+    font-size: 14px;
     color: #027E88;
 }
-
-
-/* FOOTER TRY */
-
-/* .footLine {
-    text-align: center;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 2rem;
-} */
 
 .footLine {
     position: relative;
     left: 50%;
     transform: translate(-150px);
     padding-top: 3vh;
+    width: 300px;
 }
 
 #businessLogo {
-    color: #61514B;
+    color: #027E88;
     font-family: Jura;
-    font-size: 16px;
-    text-transform: uppercase;
+    font-size: 14px;
 
 }
 
 #log {
-    margin-left: 41%;
     display: inline-block;
 }
 
-
-
-
 .logOut {
     font-family: Jura;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #FFFFFD;
     margin-left: 25%;
     color: #027E88;
-    /*border: 1px solid #027E88; */
     padding: 3px 6px;
 }
-
-/* .mainText {
-    padding-top: 10%;
-    font-size: 20px;
-    font-family: Jura;
-    color: #61514B;
-    margin-right: 30%;
-    text-align: center;
-} */
 
 .mainText {
     padding-top: 5vh;
@@ -103,6 +81,7 @@ body {
     position: relative;
     left: 50%;
     transform: translate(-150px);
+    width: 300px;
 }
 
 #queueNumber {
@@ -113,16 +92,6 @@ body {
     text-align: center;
     padding: 10px;
 }
-
-/* Button Row  */
-
-
-/* .buttonRow {
-    position: relative;
-    left: 50%;
-    transform: translate(-150px);
-    display: flex;
-} */
 
 .buttonRow {
     margin-bottom: 10%;
@@ -166,9 +135,22 @@ body {
     background-color: #FFFFFD;
 }
 
-/* Login Html  */
-/* Login Heading  */
+.businessInput {
+    text-align: center;
+}
 
+.businessInput>li {
+    display: inline;
+}
+
+.businessInput i {
+    font-size: 14px;
+    padding: 1%;
+    padding-bottom: 5vh;
+    color: #027E88;
+}
+
+/* Login Html  */
 .logo {
     margin-left: 70%;
     text-align: center;
@@ -234,8 +216,7 @@ input[type=password] {
     margin-top: 16px;
 }
 
-/* POP UP BOX */
-
+/* Pop Up Info Box */
 #confirm {
     display: none;
     background-color: #FFFFFD;
@@ -245,7 +226,7 @@ input[type=password] {
     text-align: center;
     border: 1px solid #027E88;
     height: 320px;
-    width: 240px;
+    width: 300px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -263,7 +244,6 @@ input[type=password] {
     font-size: 16px;
 }
 
-
 #confirm .message {
     padding: 20px;
     text-align: left;
@@ -272,7 +252,7 @@ input[type=password] {
 }
 
 #confirm #qrcode {
-    padding-left: 70px;
+    padding-left: 95px;
     text-align: center;
     position: relative;
 }
@@ -285,13 +265,10 @@ input[type=password] {
 }
 
 /* Register Html  */
-/* Register Heading  */
-
 .logoBig {
     text-align: center;
     padding-top: 15vh;
 }
-
 
 #mainLogo {
     color: #F44D29;
@@ -357,15 +334,13 @@ input[type=password] {
     text-align: center;
 }
 
-
 /* User Html  */
-/* User Heading  */
-
 .logoLine {
     position: relative;
     left: 50%;
     transform: translate(-150px);
     padding-top: 3vh;
+    width: 300px;
 }
 
 #myLogo {
@@ -404,17 +379,17 @@ input[type=password] {
     position: relative;
     left: 50%;
     transform: translate(-150px);
+    width: 300px;
 }
 
 .textTwo {
-    /* padding-top: 2vh;
-    padding-bottom: 4vh; */
     font-size: 20px;
     font-family: Jura;
     color: #61514B;
     position: relative;
     left: 50%;
     transform: translate(-150px);
+    width: 300px;
 }
 
 #textThree {
@@ -433,11 +408,9 @@ input[type=password] {
     color: #61514B;
     text-align: center;
     margin-top: 2vh;
-    margin-bottom: 4vh;
-    /* align-items: center;  */
+    margin-bottom: 2vh;
 
 }
-
 
 footer {
     position: absolute;
@@ -469,23 +442,28 @@ footer {
     font-size: 13px;
 }
 
+.footerImage {
+    height: 190px;
+    width: 100%;
+}
+  
 
 .footerImage {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    width: 300px;
 }
 
 .footerImage img {
     max-width: 100vw;
     max-height: 50vh;
-}
+} 
 
 .info {
     font-family: Merriweather, Arial;
     font-size: 14px;
 }
-
 
 p {
     animation-duration: 0.5s;

@@ -40,84 +40,155 @@ How do use the application
 ### Login Page
 Home Page
 ![Login Page](state/static/images/login-page.png)
-
 Head Logo
 ![Logo](state/static/images/logo.png)
-
 Login section 
 ![Login Section](state/static/images/login-section.png)
-
 Functions 
 ![Function Section](state/static/images/option-section.png)
-
 Infomation 
 ![Info Section](state/static/images/info-section.png)
-
 ### Register Page
 Home Page
 ![Register Page](state/static/images/reg-page.png)
-
 Create Account 
 ![Create Account ](state/static/images/reg-account.png)
-
 Features
-Already have account
+"Already have account"
 ![Create Account ](state/static/images/business.png)
-
-Password don't match 
+"Password don't match"
 ![Create Account ](state/static/images/password.png)
 ### User Page 
 
 
 
 ### Business Page
-
+### Update Page
 
 
 ### Future Features
 I would like to add: 
-- Estimated waiting time.
-- Cancellation option.
-- Skip my turn and let person behind go before my turn. 
-
+- Give and update clients the expected estimated waiting time.
+- Give clients an cancellation option.
+- Give clients the option to skip my turn and let the person with the number behind go before my turn. 
+- Give business the option of thier own design, choosing font-colors, background photos and edit text. 
 
 ## Design  
 
 __Color Scheme__
 
-I wanted to keep the color scheme simple for this project so I chose colors that work nicley together. Two dark colors, two light colors and one pop color.
+I wanted to keep the color scheme simple for this project so I chose colors that work nicley together. Two dark colors, two pop colors and one light color. 
 ![Color Scheme](state/static/images/color-scheme.png)
 
+
 __Wireframes__
-
-Wireframes were created used Figma. 
-
+My wireframe and design were created using Figma. 
 ![Wireframe](state/static/images/wireframe.png)
+
+
 ## Databases
 
 
 ## Technologies Used
 ### Languages Used
-- Html 
+- HTML 
 - CSS
 - Python 
 - JavaScript 
 
 ## Frameworks, Libraries and Programmes Used
+- __GitHub:__
+    GitHub was used to store the code for the project. 
 
-- GitHub 
-- GitPod 
-- Heroku 
-- Django 
-- Dj Database URL 
+- __GitPod:__
+     GitPod was used to provide the programming environment. 
+
+- __Django__
+    Django is a python based framework that was used to develop the web application.
+
+- __PostgreSQL__
+    PostgreSQL is database being used. 
+
+-  __Heroku__ 
+    Heroku is a cloud based application platform connected to GitHub, used to deploy this project.
+
+- __Google Fonts:__
+    Google Fonts was used to import the font Jura, Merriweather and Poiret One as the fonts for this project.
+
+- __Font Awesome:__
+    Font Awesome was used for the fullscreen button icon.
+
+- __Photoshop:__
+    Photoshop was used to resize and to edit background image.
+
+- __Trello__
+    Trello was used for adding user stories, tasks and to fallow the project. 
+
+- __Figma__
+    Figma is a wireframing tool and helped with the design for this project. 
+
 
 ## Testing 
-### Validator Testing
+
+
+
+### Validator Testing 
+- HTML
+  - No errors were returned when passing through the official W3C validator: 
+  [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Femmabergner.github.io%2Fblink%2F)
+
+- CSS
+  - No errors were found when passing through the official (Jigsaw) validator: [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Femmabergner.github.io%2Fblink%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+- JavaScript
+  - No errors was found when passing through the official [Jshint validator](https://jshint.com/)
+    - There are 11 functions in this file.
+    - Function with the largest signature take 3 arguments, while the median is 1.
+    - Largest function has 11 statements in it, while the median is 2.
+    - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
+
+- __PEP8__
+
+    The code was validated using PEP8. No errors were returned.
+
+
+- Accessibility 
+  - The colors and fronts are easy to read and accessible by running it through lighthouse in devtools. 
+
+    ![Validator Testing](assets/readme/lighthouses.png)
+
+
+## Manual Testing 
+
+Add Business 
+A business can easily resister themself straight on the site. 
+Edit Business 
+- Once the business has signed in, changing email or password i possible. 
+Delete Business
+The business can decide to delete thier account just by clicking the text that says delete.   
+
 ## Bugs Found
 
 ## Deployment
+
+This project was deployed using Github and Heroku.
+
+Github
+To create a new repository I took the following steps:
+
+Logged into Github.
+Clicked over to the ‘repositories’ section.
+Clicked the green ‘new’ button. This takes you to the create new repository page.
+Once there under ‘repository template’ I chose the code institute template from the dropdown menu.
+I input a repository name then clicked the green ‘create repository button’ at the bottom of the page.
+Once created I opened the new repository and clicked the green ‘Gitpod’ button to create a workspace in Gitpod for editing.
+
+Django and Heroku
+To get the Django framework installed and set up I followed the Code institutes Django Blog cheatsheet.
 
 ## Credit
 
 Instuctions on Heruko
 https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit
+
+W3School 

@@ -34,7 +34,11 @@ class ControlPage(View):
         url = 'https://8000-emmabergner-dontq-zj38f323g5o.ws-eu46.gitpod.io'
 
         url_pop_up_text = f"{url}/user?{state.business}"
+        opentext = f"Helping currently now:"
+        if state.current == 0:
+            opentext = f"Press the green button to start the queue."
         context = {
+            'text': opentext,
             'current': state.current,
             'userurl': f"functionAlert('{url_pop_up_text}')",
             'businessname': state.business
@@ -109,6 +113,9 @@ class Update(View):
         u =request.user
         u.email = email
         u.save()
+        # p = request.user
+        # p.password = password
+        # p.save()
         return redirect('/')
  
 
@@ -157,16 +164,13 @@ def makeContext(currentInt, ticket):
     if ticketInt - currentInt < 0 : 
         return {'current': "", 'ticket': "You missed your turn", 'remaining': ""}
     current = f"We are helping number {currentInt}"
+    ticketIntStr = str(ticketInt)
     if currentInt == 0:
         current = f"We are just about to open."
+        ticketIntStr = ""
     ticketText = f"Your number is:"
     ticket = f"{ticketInt} "
     remaining = f"So {ticketInt - currentInt} are in line before you."
-    return {'current': current, 'ticketText' : ticketText, 'ticket': ticketInt, 'remaining': remaining}
+    return {'current': current, 'ticketText' : ticketText, 'ticket': ticketIntStr, 'remaining': remaining}
 
 
-
-
-    # Now there is less then 10 people before you
-    # You only have 5 people in line before you
-    

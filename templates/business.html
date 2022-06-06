@@ -23,10 +23,7 @@
         <div class="headLine">
             <span id="logo">Dont</span>
             <span id="logoTwo">Q</span>
-            <span id="urlInfo" onclick="{{ userurl }}">
-                <span class="urlInfo">Users URL <i class="fa fa-qrcode" aria-hidden="true"></i>
-                </span>
-            </span>
+
             <!-- <span id="urlInfo">User URL</span> -->
         </div>
         <div class="info">
@@ -65,13 +62,11 @@
                 confirmBox.show();
             }
         </script>
-        <div class="mainText">Currently:</div>
+        <div class="mainText">{{ text }}</div>
 
         <!-- Middle section -->
         <div id="queueNumber">{{ current }}</div>
 
-
-        <!-- bottom section -->
         <div class="buttonRow">
             <form action="#" method="get">
                 <input type="submit" class="prevButton" value="&lt;" name="mybtn">
@@ -92,41 +87,28 @@
             </form>
         </div>
     
-
-        <div class="footLine">
-
-            <a id="businessLogo" href="/update" class="register">{{businessname}} </a>
-
-
+    </header>
+<!-- bottom section -->
+    <!-- Footer for business input -->
+    <footer>
+        <ul class="businessInput">
+            <li>
+                <a id="businessLogo" href="/update" class="register">{{businessname}}</a>
+            </li>
+            <li>
+                <span id="urlInfo" onclick="{{userurl}}">
+                    <span class="urlInfo">Url <i class="fa fa-qrcode" aria-hidden="true"></i>
+                    </span>
+                </span>
+            </li>
             <span id="log">
                 <form action="#" method="get">
                     <input type="submit" class="logOut" value="LogOut" name="mylogout">
                     {% csrf_token %}
                 </form>
             </span>
-        </div> 
-    </header>
-
-    <div class="footerImage">
-    </div>
-    <footer>
-        <ul class="socialNetwork">
-            <li>
-                <a href="https://twitter.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa fa-twitter"
-                        aria-hidden="true"></i></a>
-            </li>
-            <li>
-                <a href="https://youtube.com" target="_blank" rel="noopener"
-                    aria-label="Visit our YouTube page (opens in a new tab)"><i class="fa fa-facebook"
-                        aria-hidden="true"></i></a>
-            </li>
-            <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
-            </li>
         </ul>
-        <div class="copyRight">&copy; Copyright 2022: DontQ </div>
+        <!-- <div class="copyRight">&copy; Copyright 2022: DontQ </div> -->
 
 
         <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>

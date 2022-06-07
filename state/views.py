@@ -7,6 +7,7 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth import logout
 from django.contrib import messages
 from django.contrib.auth.models import User
+import urllib.parse
 
 # Create your views here.
 
@@ -18,6 +19,7 @@ class ControlPage(View):
     template_name = 'user.html'
 
     def get(self, request, *args, **kwargs):
+        print(request.user)
         state = get_object_or_404(State, business=request.user)
         if (request.GET.get('mybtn') and state.current > 0):
             state.current = state.current-1
@@ -32,9 +34,10 @@ class ControlPage(View):
         state.save()
         # URL, for example: .../user?baronen
         url = 'https://8000-emmabergner-dontq-zj38f323g5o.ws-eu47.gitpod.io'
+        print(">>>>>", state.business)
 
-        url_pop_up_text = f"{url}/user?{state.business}"
-        opentext = f"Helping currently now:"
+        url_pop_up_text = f"{url}/user?{urllib.parse.quote(str(state.business))}"
+        opentext = f"Helping currently:"
         if state.current == 0:
             opentext = f"Press the green button to start the queue."
         context = {
@@ -112,10 +115,9 @@ class Update(View):
         # User.objects.update_user(username=businessName, email=email)
         u =request.user
         u.email = email
+        if not passwordOne  == "":
+            u.set_password (passwordOne)
         u.save()
-        # p = request.user
-        # p.password = password
-        # p.save()
         return redirect('/')
  
 
@@ -130,7 +132,7 @@ class UserPage(View):
 
     # URL, for example: .../user?baronen
     def get(self, request, *args, **kwargs):
-        businessName = request.get_full_path().split("?")[1]
+        businessName = urllib.parse.unquote(request.get_full_path().split("?")[1])
         state = get_object_or_404(State, business__username=businessName)
         ticket = state.next
         if state.current > ticket:
@@ -138,7 +140,7 @@ class UserPage(View):
         state.next = ticket + 1
         state.save()
         # URL, for example: .../usertwo?46&Baronen
-        return redirect('/usertwo?' + str(ticket) + "&" + businessName)
+        return redirect('/usertwo?' + str(ticket) + "&" + urllib.parse.quote(businessName))
 
 
 class UserTwoPage(View):
@@ -151,31 +153,39 @@ class UserTwoPage(View):
         queryString = parts[1]  # 46&Baronen
         partstwo = queryString.split("&")      # ["46", "Baronen"]
         ticket = partstwo[0]      # 46
-        businessName = partstwo[1]     # Baronen
+        businessName = urllib.parse.unquote(partstwo[1])     # Baronen
         state = get_object_or_404(State, business__username=businessName)
         context = makeContext(state.current, ticket)
         return render(request, 'user.html', context)
 
-
-def makeContext(currentInt, ticket):
-    ticketInt = int(ticket)
-    if currentInt == ticketInt:
-        return {'current': "", 'ticket': "It is your turn", 'remaining': ""}
-
-    if ticketInt - currentInt < 0 : 
-        return {'current': "", 'ticket': "You missed your turn", 'remaining': ""}
-
-    current = f"We are helping number {currentInt}"
-    ticketIntStr = str(ticketInt)
+def makeContext(currentInt, ticketStr):
+    ticketInt = int(ticketStr)
+    textOne= ""
+    textTwo = ""
+    textThree = ""
+    textFour = ""
     if currentInt == 0:
-        current = f"We are just about to open." 
-        ticketIntStr = ""
-    ticketText = f"Your number is:"
-    ticket = f"{ticketInt} "
-    remaining = f"So {ticketInt - currentInt} people are in line before you."
-    if ticketInt == 1:
-        ticketIntStr = f"You are next in line"
-        return {'current': current, 'ticket': ticketIntStr, 'remaining': ""}
-    return {'current': current, 'ticketText' : ticketText, 'ticket': ticketIntStr, 'remaining': remaining}
+        if ticketInt == 1:
+            textOne = "We are just about to open."
+            textThree = "You are next in line"
+        else:
+            textOne = "We are just about to open."
+            textTwo = "Your number is:"
+            textThree = ticketStr
+            textFour = f"So {ticketInt - currentInt} people are in line before you."
+    else:
+        if ticketInt < currentInt:
+            textThree = "You missed your turn"
+        if ticketInt == currentInt:
+            textThree = "It is your turn"
+        if ticketInt - currentInt == 1:
+            textThree = "You are next in line"
+        if ticketInt - currentInt > 1:
+            textOne = f"We are helping number {currentInt}"
+            textTwo = "Your number is:"
+            textThree = ticketStr
+            textFour = f"So {ticketInt - currentInt} people are in line before you."
+    return  {'current': textOne, 'ticketText' : textTwo, 'ticket': textThree, 'remaining': textFour}
+
 
 

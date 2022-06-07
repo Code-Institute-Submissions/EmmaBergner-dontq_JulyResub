@@ -32,7 +32,7 @@ __Superuser / Admin__
 __How to use the application DontQ.__
 
 ### Login Page
-The login page is the home page for businesses using the application. From there you can, get more information about DontQ, register a new business and sign in. 
+The login page is the home page for businesses using the application. From there they can read about DontQ, register a new business and sign in to get access to the control page. 
 
 Home Page
 ![Login Page](state/static/images/home-page.png)
@@ -55,15 +55,8 @@ Create Account
 "Password don't match"
 ![Password dont match ](state/static/images/password.png)
 
-
-### User Page 
-The user page is where users see their individual queueing ticket. By scaning the QR code in the shop. This is where they will be updated on the current and remaining queue number. 
-
-Updated Queue
-![Queue Update](state/static/images/queue-message.png)
-
 ### Control Page
-The control page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For your clients to receive tickets, they need to load the below URL. An easy way to achieve this is to place a copy of the OR code in your shop.
+The control page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For clients to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the OR code in the shop.
 
 Head Page
 ![Control Page ](state/static/images/control-page.png)
@@ -77,15 +70,24 @@ Url Code
 ![Url code ](state/static/images/url-code.png)
 
 ### Update Page
+The update page is if businesses wants to change or update email or password, or if they want to delete their account. 
+
 Update Business Info
 ![Update Info ](state/static/images/update.png)
+
+### User Page 
+The user page is where users see their individual queueing ticket by scaning the QR code or copying the Url. This is where they will be updated on the current and remaining queue number. 
+
+Updated Queue
+![Queue Update](state/static/images/queue-message.png)
+
 
 ### Future Features
 I would like to add: 
 - Give and update clients the expected estimated waiting time.
 - Give clients an cancellation option.
 - Give clients the option to skip my turn and let the person with the number behind go before my turn. 
-- Give business the option of thier own design, choosing font-colors, background photos and edit text. 
+- Give business the option to create thier own design, choosing font-colors, background photos and edit text. 
 
 ## Design  
 __Color Scheme__

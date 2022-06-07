@@ -8,6 +8,7 @@ By scanning a QR-code when entering the store customers will automatically recei
 
 The idea is, instead of printing out tickets when entering stores (for business useing this type of queing system) everything is online and on personal devices. This application is a sustainable way of thinking and can be used in any store that uses any sort of queuing system, using numbers. 
 
+![Ami Responsive](state/static/images/ami.png)
 
 ## User Experience
 ### User Stories
@@ -34,31 +35,32 @@ __How to use the application DontQ.__
 The login page is the home page for businesses using the application. From there you can, get more information about DontQ, register a new business and sign in. 
 
 Home Page
-![Login Page](state/static/images/login-page.png)
+![Login Page](state/static/images/home-page.png)
 Head Logo
 ![Logo](state/static/images/logo.png)
 Login section 
-![Login Section](state/static/images/login-section.png)
+![Login Section](state/static/images/login.png)
 Functions 
-![Function Section](state/static/images/option-section.png)
+![Function Section](state/static/images/option.png)
 Infomation 
-![Info Section](state/static/images/info-section.png)
+![Info Section](state/static/images/info.png)
 
 ### Register Page
 The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will recireceive an error message guiding them to login.  
 
-Home Page
-![Register Page](state/static/images/reg-page.png)
 Create Account 
-![Create Account ](state/static/images/reg-account.png)
-Features
+![Create Account ](state/static/images/reg-page.png)
 "Already have account"
-![Create Account ](state/static/images/business.png)
+![Business Excist ](state/static/images/business.png)
 "Password don't match"
-![Create Account ](state/static/images/password.png)
+![Password dont match ](state/static/images/password.png)
+
 
 ### User Page 
 The user page is where users see their individual queueing ticket. By scaning the QR code in the shop. This is where they will be updated on the current and remaining queue number. 
+
+Updated Queue
+![Queue Update](state/static/images/queue-message.png)
 
 ### Control Page
 The control page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For your clients to receive tickets, they need to load the below URL. An easy way to achieve this is to place a copy of the OR code in your shop.
@@ -92,7 +94,7 @@ I wanted to keep the color scheme simple for this project so I chose colors that
 
 __Wireframes__
 My wireframe and design were created using Figma. 
-![Wireframe](state/static/images/wireframe.png)
+![Wireframe](state/static/images/wire.png)
 
 
 ## Technologies Used
@@ -134,7 +136,6 @@ My wireframe and design were created using Figma.
     Figma is a wireframing tool and helped with the design for this project. 
 
 ## Testing 
-
 ### Validator Testing 
 - HTML
   - No errors were returned when passing through the official W3C validator: 
@@ -150,26 +151,31 @@ My wireframe and design were created using Figma.
     - Largest function has 11 statements in it, while the median is 2.
     - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
-- __PEP8__
-    The code was validated using PEP8. No errors were returned.
-
+- PEP8
+    - The code was validated using PEP8. No errors were returned.
 
 - Accessibility 
   - The colors and fronts are easy to read and accessible by running it through lighthouse in devtools. 
 
-    ![Validator Testing](assets/readme/lighthouses.png)
+![Validator Testing](state/static/images/light-house.png) 
 
 
 ## Manual Testing 
 
-Add Business 
-A business can easily resister themself straight on the site. 
-Edit Business 
+__Add Business__ 
+- A business can easily resister themself straight on the site. 
+
+__Edit Business__ 
 - Once the business has signed in, changing email or password i possible. 
-Delete Business
-The business can decide to delete thier account just by clicking the text that says delete.   
+
+__Delete Business__
+The business can decide to delete thier account just by clicking the text that says delete.
+
+Queue Infomation Update
+
 
 ## Bugs Found
+The Url will be automaticly updated and will not work after some time. 
 
 ## Deployment
 
@@ -177,23 +183,32 @@ This project was deployed using Github and Heroku.
 
 __Github__
 
-To create a new repository I took the following steps:
-
-Logged into Github.
-Clicked over to the ‘repositories’ section.
-Clicked the green ‘new’ button. This takes you to the create new repository page.
-Once there under ‘repository template’ I chose the code institute template from the dropdown menu.
-I input a repository name then clicked the green ‘create repository button’ at the bottom of the page.
-Once created I opened the new repository and clicked the green ‘Gitpod’ button to create a workspace in Gitpod for editing.
-
+Login to Github.
+- Click the green "new" button and create new repository page.
+- Chose a repository name then clicked the green "create repository button" at the bottom of the page.
+- Clicked the green ‘Gitpod’ button to create a workspace in Gitpod for editing.
 
 __Heroku__
 
-To get the Django framework installed and set up I followed the Code institutes Django Blog cheatsheet.
+Login to Heroku.
+- Create a "New App" and give it a name, it must be unique.
+- Click "Create App" and this will take you to a page where you can deploy your project.
+
+- Click on the 'Resources' tab and search for 'Heroku Postgres' in the Add-ons section to add the Heroku Postgres database to the project.
+- Click on the 'Settings' tab at the top of the page. The following steps must be completed before deployment.
+- Click 'Reveal Config Vars'. Here the database URL is stored, it is the connection to the database, so this must be copied and stored within env.py file within the same directory as the manage.py file.
+
+- To deploy the project go to the deploy tab and scroll  down to the end and deploy our branch.
+- View the build log to make sure that everything works okay.
+- The app has been deployed to Heroku.
+
+
+To get the Django framework installed and set up I followed Code Institutes Django [sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
+
 
 ## Credit
 
-Instuctions on Heruko was found [here](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit)
+Instuctions on Heruko and Django was found [here](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit)
 
 [W3School](https://www.w3schools.com/) helped me out with CSS and HTML code. 
 

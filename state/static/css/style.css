@@ -233,7 +233,7 @@ input[type=password] {
     margin: auto;
     text-align: center;
     clear: both;
-    margin-top: 50px;
+    /* margin-top: 20px; */
 }
 
 .noAccount {
@@ -248,12 +248,12 @@ input[type=password] {
     display: none;
     background-color: #FFFFFD;
     color: #61514B;
-    top: 21%;
+    top: 25%;
     box-sizing: border-box;
     text-align: center;
     border: 1px solid #027E88;
     height: 320px;
-    width: 300px;
+    width: 250px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -328,7 +328,7 @@ input[type=password] {
 .login-section {
     clear: both;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 
 }
 
@@ -492,13 +492,13 @@ footer {
     font-size: 14px;
 }
 
-p {
+/* p {
     animation-duration: 0.5s;
     animation-name: slidein;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     text-align: center;
-}
+} */
 
 @keyframes slidein {
     from {

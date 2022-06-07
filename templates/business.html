@@ -93,7 +93,8 @@
     <footer>
         <ul class="businessInput">
             <li>
-                <a id="businessLogo" href="/update" class="register">{{businessname}}</a>
+                <a id="businessLogo" href="/update" class="register">{{businessname}}</a> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <!-- <i class="fa fa-plus-square-o" aria-hidden="true"></i> -->
             </li>
             <li>
                 <span id="urlInfo" onclick="{{userurl}}">
@@ -103,9 +104,8 @@
             </li>
             <span id="log">
                 <form action="#" method="get">
-                    <input type="submit" class="logOut" value="LogOut" name="mylogout">
+                    <input type="submit" class="logOut" value="LogOut" name="mylogout"> <i class="fa fa-sign-out" aria-hidden="true"></i></form>
                     {% csrf_token %}
-                </form>
             </span>
         </ul>
         <!-- <div class="copyRight">&copy; Copyright 2022: DontQ </div> -->

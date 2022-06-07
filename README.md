@@ -28,16 +28,11 @@ __Superuser / Admin__
 
 
 ## Features
-How do use the application
-- The login page is the home page for businesses using the application. From there you can, get more information about what DontQ, register a new business and sign in. 
-
-- The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will recireceive an error message guiding them to login.  
-
-- The business page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For your clients to receive tickets, they need to load the below URL. An easy way to achieve this is to place a copy of the OR code in your shop.
-
-- The user page is where users see their individual queueing ticket. By scaning the QR code in the shop. This is where they will be updated on the current and remaining queue number. 
+__How to use the application DontQ.__
 
 ### Login Page
+The login page is the home page for businesses using the application. From there you can, get more information about DontQ, register a new business and sign in. 
+
 Home Page
 ![Login Page](state/static/images/login-page.png)
 Head Logo
@@ -48,7 +43,10 @@ Functions
 ![Function Section](state/static/images/option-section.png)
 Infomation 
 ![Info Section](state/static/images/info-section.png)
+
 ### Register Page
+The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will recireceive an error message guiding them to login.  
+
 Home Page
 ![Register Page](state/static/images/reg-page.png)
 Create Account 
@@ -58,13 +56,27 @@ Features
 ![Create Account ](state/static/images/business.png)
 "Password don't match"
 ![Create Account ](state/static/images/password.png)
+
 ### User Page 
+The user page is where users see their individual queueing ticket. By scaning the QR code in the shop. This is where they will be updated on the current and remaining queue number. 
 
+### Control Page
+The control page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For your clients to receive tickets, they need to load the below URL. An easy way to achieve this is to place a copy of the OR code in your shop.
 
+Head Page
+![Control Page ](state/static/images/control-page.png)
+Button Control 
+![Button Control ](state/static/images/button.png)
+Reset 
+![Reset ](state/static/images/reset.png)
+Menu Options
+![Menu ](state/static/images/menu.png)
+Url Code
+![Url code ](state/static/images/url-code.png)
 
-### Business Page
 ### Update Page
-
+Update Business Info
+![Update Info ](state/static/images/update.png)
 
 ### Future Features
 I would like to add: 
@@ -74,19 +86,13 @@ I would like to add:
 - Give business the option of thier own design, choosing font-colors, background photos and edit text. 
 
 ## Design  
-
 __Color Scheme__
-
 I wanted to keep the color scheme simple for this project so I chose colors that work nicley together. Two dark colors, two pop colors and one light color. 
 ![Color Scheme](state/static/images/color-scheme.png)
-
 
 __Wireframes__
 My wireframe and design were created using Figma. 
 ![Wireframe](state/static/images/wireframe.png)
-
-
-## Databases
 
 
 ## Technologies Used
@@ -127,10 +133,7 @@ My wireframe and design were created using Figma.
 - __Figma__
     Figma is a wireframing tool and helped with the design for this project. 
 
-
 ## Testing 
-
-
 
 ### Validator Testing 
 - HTML
@@ -148,7 +151,6 @@ My wireframe and design were created using Figma.
     - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
 - __PEP8__
-
     The code was validated using PEP8. No errors were returned.
 
 
@@ -173,7 +175,8 @@ The business can decide to delete thier account just by clicking the text that s
 
 This project was deployed using Github and Heroku.
 
-Github
+__Github__
+
 To create a new repository I took the following steps:
 
 Logged into Github.
@@ -183,12 +186,15 @@ Once there under ‘repository template’ I chose the code institute template f
 I input a repository name then clicked the green ‘create repository button’ at the bottom of the page.
 Once created I opened the new repository and clicked the green ‘Gitpod’ button to create a workspace in Gitpod for editing.
 
-Django and Heroku
+
+__Heroku__
+
 To get the Django framework installed and set up I followed the Code institutes Django Blog cheatsheet.
 
 ## Credit
 
-Instuctions on Heruko
-https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit
+Instuctions on Heruko was found [here](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit)
 
-W3School 
+[W3School](https://www.w3schools.com/) helped me out with CSS and HTML code. 
+
+My QR code was created [here](https://www.the-qrcode-generator.com/) 

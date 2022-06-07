@@ -31,7 +31,7 @@ class ControlPage(View):
             return redirect('/')
         state.save()
         # URL, for example: .../user?baronen
-        url = 'https://8000-emmabergner-dontq-zj38f323g5o.ws-eu46.gitpod.io'
+        url = 'https://8000-emmabergner-dontq-zj38f323g5o.ws-eu47.gitpod.io'
 
         url_pop_up_text = f"{url}/user?{state.business}"
         opentext = f"Helping currently now:"
@@ -161,16 +161,21 @@ def makeContext(currentInt, ticket):
     ticketInt = int(ticket)
     if currentInt == ticketInt:
         return {'current': "", 'ticket': "It is your turn", 'remaining': ""}
+
     if ticketInt - currentInt < 0 : 
         return {'current': "", 'ticket': "You missed your turn", 'remaining': ""}
+
     current = f"We are helping number {currentInt}"
     ticketIntStr = str(ticketInt)
     if currentInt == 0:
-        current = f"We are just about to open."
+        current = f"We are just about to open." 
         ticketIntStr = ""
     ticketText = f"Your number is:"
     ticket = f"{ticketInt} "
-    remaining = f"So {ticketInt - currentInt} are in line before you."
+    remaining = f"So {ticketInt - currentInt} people are in line before you."
+    if ticketInt == 1:
+        ticketIntStr = f"You are next in line"
+        return {'current': current, 'ticket': ticketIntStr, 'remaining': ""}
     return {'current': current, 'ticketText' : ticketText, 'ticket': ticketIntStr, 'remaining': remaining}
 
 

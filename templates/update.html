@@ -17,8 +17,8 @@
             <span id="mainLogo">Dont</span><span id="mainLogoTwo">Q</span>
         </div>
 
-        <div class="formInfo">To change email or password</div> 
-        <div class="joinUs">Type in a new and click save</div> 
+        <div class="formInfo">To change email or password</div>
+        <div class="joinUs">Type in a new and click save</div>
 
         <section class="login-section">
 
@@ -26,10 +26,10 @@
             <ul class="messages">
                 {% for message in messages %}
                 <li>{{ message }}</li>
-                    {% endfor %}
+                {% endfor %}
             </ul>
             {% endif %}
-            
+
             <form method="POST" action="">
                 {% csrf_token %}
 
@@ -43,7 +43,7 @@
                 <div>
                     <label for="password" class="aligned"> Password:</label>
                 </div>
-                <div> 
+                <div>
                     <input type="password" id="password" name="passwordOne">
                 </div>
                 <div>
@@ -53,13 +53,13 @@
                     <input type="password" id="password" name="passwordTwo">
                 </div>
                 <div>
-                    <button type="submit" value="update" class="login">Save
+                    <button type="submit" value="update" class="save">Save
                 </div>
             </form>
-    
+
             <div class="buttonRow">
                 <form action="#" method="GET">
-                    <input type="submit" class="resetButton" value="Delete Account" name="delete">
+                    <input type="submit" class="deleteButton" value="Delete Account" name="delete">
                     {% csrf_token %}
                 </form>
             </div>
@@ -70,6 +70,5 @@
 
     </header>
 </body>
-
 
 </html>

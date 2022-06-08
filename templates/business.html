@@ -23,28 +23,27 @@
         <div class="headLine">
             <span id="logo">Dont</span>
             <span id="logoTwo">Q</span>
-
-            <!-- <span id="urlInfo">User URL</span> -->
         </div>
+        
         <div class="info">
             <div id="confirm">
                 <button class="yes"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
-                <div class="message">For your clients to receive tickets, they need to load the 
+                <div class="message">For your clients to receive tickets, they need to load the
                     below URL. An easy way to achive this is to place a copy of the OR code in your shop.
                 </div>
                 <div id="qrcode"></div>
                 <div class="url">
 
-                    
+
                 </div>
             </div>
         </div>
+
         <script>
             $("#confirm").hide();
             function functionAlert(url) {
                 var confirmBox = $("#confirm");
                 confirmBox.find(".url").text(url);
-                //new QRCode(document.getElementById("qrcode"), url);
                 document.getElementById("qrcode").innerHTML = ""
                 new QRCode(document.getElementById("qrcode"), {
                     text: url,
@@ -58,13 +57,12 @@
                 myYes.on('click', function () {
                     confirmBox.hide();
                 });
-                //myYes.click(myYes);
                 confirmBox.show();
             }
         </script>
         <div class="mainText">{{ text }}</div>
 
-        <!-- Middle section -->
+        <!-- Control button and reset -->
         <div id="queueNumber">{{ current }}</div>
 
         <div class="buttonRow">
@@ -79,22 +77,21 @@
             </form>
         </div>
 
-   
+
         <div class="buttonRow">
             <form action="#" method="get">
                 <input type="submit" class="resetButton" value="Reset" name="myreset">
                 {% csrf_token %}
             </form>
         </div>
-    
     </header>
-<!-- bottom section -->
-    <!-- Footer for business input -->
+
+    <!-- Footer for businesses -->
     <footer>
         <ul class="businessInput">
             <li>
-                <a id="businessLogo" href="/update" class="register">{{businessname}}</a> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                <!-- <i class="fa fa-plus-square-o" aria-hidden="true"></i> -->
+                <a id="businessLogo" href="/update" class="register">{{businessname}}</a> <i
+                    class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </li>
             <li>
                 <span id="urlInfo" onclick="{{userurl}}">
@@ -104,11 +101,12 @@
             </li>
             <span id="log">
                 <form action="#" method="get">
-                    <input type="submit" class="logOut" value="LogOut" name="mylogout"> <i class="fa fa-sign-out" aria-hidden="true"></i></form>
-                    {% csrf_token %}
+                    <input type="submit" class="logOut" value="LogOut" name="mylogout"> <i class="fa fa-sign-out"
+                        aria-hidden="true"></i>
+                </form>
+                {% csrf_token %}
             </span>
         </ul>
-        <!-- <div class="copyRight">&copy; Copyright 2022: DontQ </div> -->
 
 
         <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>

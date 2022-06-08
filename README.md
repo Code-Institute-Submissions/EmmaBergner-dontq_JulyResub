@@ -10,12 +10,15 @@ The idea is, instead of printing out tickets when entering stores (for business 
 
 ![Ami Responsive](state/static/images/ami.png)
 
-## User Experience
+## Project Plan 
+I used Trello to plan and to fallow up with my project. 
+![Ami Responsive](state/static/images/trellos.png)
+
+
 ### User Stories
 __User/Customer__
 - As a user I want a queue number so that I know when it is my turn.
 - As a user I want to be updated on the current number so that I can claim my turn in time.
-- As a user I want to have a more graphic design so I can easily see when it's my turn.
 
 __Business__
 - As a business I want to be able to control the current number so that the queue number is correct.
@@ -36,13 +39,13 @@ The login page is the home page for businesses using the application. From there
 
 
 Home Page
-![Login Page](state/static/images/home-page.png)
+![Login Page](state/static/images/login-head.png)
 Head Logo
 ![Logo](state/static/images/logo.png)
 Login section 
 ![Login Section](state/static/images/login.png)
 Functions 
-![Function Section](state/static/images/option.png)
+![Function Section](state/static/images/we-do.png)
 Infomation 
 ![Info Section](state/static/images/info.png)
 
@@ -50,7 +53,7 @@ Infomation
 The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will receive an error message guiding them to login.  
 
 Create Account 
-![Create Account ](state/static/images/reg-page.png)
+![Create Account ](state/static/images/register-page.png)
 "Already have account"
 ![Business Excist ](state/static/images/business.png)
 "Password don't match"
@@ -60,27 +63,30 @@ Create Account
 The control page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For clients to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the OR code in the shop.
 
 Head Page
-![Control Page ](state/static/images/control-page.png)
+![Control Page ](state/static/images/control-head.png)
 Button Control 
-![Button Control ](state/static/images/button.png)
+![Button Control ](state/static/images/button-control.png)
 Reset 
 ![Reset ](state/static/images/reset.png)
 Menu Options
 ![Menu ](state/static/images/menu.png)
 Url Code
-![Url code ](state/static/images/url-code.png)
+![Url code ](state/static/images/url-info.png)
 
 ### Update Page
 The update page is if businesses wants to change or update email or password, or if they want to delete their account. 
 
 Update Business Info
-![Update Info ](state/static/images/update.png)
+![Update Info ](state/static/images/update-head.png)
 
 ### User Page 
 The user page is where users see their individual queueing ticket by scanning the QR code or copying the Url. This is where they will be updated on the current and remaining queue number. 
 
+User Page
+![Queue Update](state/static/images/user-page.png)
+
 Updated Queue
-![Queue Update](state/static/images/queue-message.png)
+![Queue Update](state/static/images/q-message.png)
 
 
 ### Future Features
@@ -97,7 +103,7 @@ I wanted to keep the color scheme simple for this project so I chose colors that
 
 __Wireframes__
 My wireframe and design were created using Figma. 
-![Wireframe](state/static/images/wire.png)
+![Wireframe](state/static/images/wireframe.png)
 
 
 ## Technologies Used
@@ -142,26 +148,21 @@ My wireframe and design were created using Figma.
 ### Validator Testing 
 - HTML
   - No errors were returned when passing through the official W3C validator: 
-  [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Femmabergner.github.io%2Fblink%2F)
+  ![W3C validator](state/static/images/html.png) 
 
 - CSS
-  - No errors were found when passing through the official (Jigsaw) validator: [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Femmabergner.github.io%2Fblink%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-
-- JavaScript
-  - No errors was found when passing through the official [Jshint validator](https://jshint.com/)
-    - There are 11 functions in this file.
-    - Function with the largest signature take 3 arguments, while the median is 1.
-    - Largest function has 11 statements in it, while the median is 2.
-    - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
+  - No errors were found when passing through the official (Jigsaw) validator: ![Jigsaw validator](state/static/images/css.png) 
 
 - PEP8
     - The code was validated using PEP8. No errors were returned.
+
+- JavaScript
+  - No errors was found when passing through the official [Jshint validator](https://jshint.com/)
 
 - Accessibility 
   - The colors and fronts are easy to read and accessible by running it through lighthouse in devtools. 
 
 ![Validator Testing](state/static/images/light-house.png) 
-
 
 ## Manual Testing 
 The final version was tested by using each function on each page.
@@ -196,8 +197,6 @@ Update page:
 User page: 
 - Verify that text and number match together. 
 - Verify that socialmedia link works. 
-
-
 
 ## Bugs Found
 The Url will be automatically updated and will not work after some time. 

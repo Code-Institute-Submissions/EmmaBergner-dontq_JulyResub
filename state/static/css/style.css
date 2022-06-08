@@ -145,10 +145,8 @@ body {
     align-items: center;
     color: #F44D29;
     background-color: #FFFFFD;
-    /* margin-top: 50px; */
     display: inline;
 }
-
 
 .save {
     font-family: Jura;
@@ -233,7 +231,6 @@ input[type=password] {
     margin: auto;
     text-align: center;
     clear: both;
-    /* margin-top: 20px; */
 }
 
 .noAccount {
@@ -426,7 +423,6 @@ input[type=password] {
     font-size: 100px;
     margin: auto;
     text-align: center;
-    /* padding: 10px; */
 
 }
 
@@ -491,24 +487,4 @@ footer {
 .info {
     font-family: Merriweather, Arial;
     font-size: 14px;
-}
-
-/* p {
-    animation-duration: 0.5s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    text-align: center;
-} */
-
-@keyframes slidein {
-    from {
-        margin-left: 50%;
-        width: 50%;
-    }
-
-    to {
-        margin-left: 0%;
-        width: 50%;
-    }
 }

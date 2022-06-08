@@ -15,8 +15,6 @@ import urllib.parse
 @method_decorator(login_required, name='get')
 class ControlPage(View):
     model = State
-    template_name = 'business.html'
-    template_name = 'user.html'
 
     def get(self, request, *args, **kwargs):
         print(request.user)
@@ -34,7 +32,6 @@ class ControlPage(View):
         state.save()
         # URL, for example: .../user?baronen
         url = 'https://8000-emmabergner-dontq-zj38f323g5o.ws-eu47.gitpod.io'
-        print(">>>>>", state.business)
 
         url_pop_up_text = f"{url}/user?{urllib.parse.quote(str(state.business))}"
         opentext = f"Currently helping:"
@@ -94,7 +91,7 @@ class Register(View):
         logout(request)
         return redirect('/')
 
- 
+
 class Update(View):
     def get(self, request, *args, **kwargs):
         if (request.GET.get('delete')):
@@ -113,22 +110,21 @@ class Update(View):
                 request, "Password does not match. Please try again.")
             return render(request, 'update.html')
         # User.objects.update_user(username=businessName, email=email)
-        u =request.user
+
+        u = request.user
         u.email = email
-        if not passwordOne  == "":
-            u.set_password (passwordOne)
+        if not passwordOne == "":
+            u.set_password(passwordOne)
         u.save()
         return redirect('/')
- 
+
 
 def makeUpdateContext(user):
-    return {'businessName': user.username, 'contactEmail' : user.email}
+    return {'businessName': user.username, 'contactEmail': user.email}
 
 
 class UserPage(View):
     model = State
-    template_name = 'business.html'
-    template_name = 'user.html'
 
     # URL, for example: .../user?baronen
     def get(self, request, *args, **kwargs):
@@ -151,16 +147,17 @@ class UserTwoPage(View):
         url = request.get_full_path()  # ".../usertwo?46&Baronen"
         parts = url.split("?")  # [".../usertwo", "46&Baronen"]
         queryString = parts[1]  # 46&Baronen
-        partstwo = queryString.split("&")      # ["46", "Baronen"]
-        ticket = partstwo[0]      # 46
-        businessName = urllib.parse.unquote(partstwo[1])     # Baronen
+        partstwo = queryString.split("&")  # ["46", "Baronen"]
+        ticket = partstwo[0]  # 46
+        businessName = urllib.parse.unquote(partstwo[1])  # Baronen
         state = get_object_or_404(State, business__username=businessName)
         context = makeContext(state.current, ticket)
         return render(request, 'user.html', context)
 
+
 def makeContext(currentInt, ticketStr):
     ticketInt = int(ticketStr)
-    textOne= ""
+    textOne = ""
     textTwo = ""
     textThree = ""
     textFour = ""
@@ -185,7 +182,4 @@ def makeContext(currentInt, ticketStr):
             textTwo = "Your number is:"
             textThree = ticketStr
             textFour = f"So {ticketInt - currentInt} people are in line before you."
-    return  {'current': textOne, 'ticketText' : textTwo, 'ticket': textThree, 'remaining': textFour}
-
-
-
+    return {'current': textOne, 'ticketText': textTwo, 'ticket': textThree, 'remaining': textFour}

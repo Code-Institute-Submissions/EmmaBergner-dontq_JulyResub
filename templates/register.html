@@ -17,58 +17,53 @@
             <span id="mainLogo">Dont</span><span id="mainLogoTwo">Q</span>
         </div>
 
-        <div class="formInfo">Please fill in the form to sign up</div> 
-        <div class="joinUs">And to join DontQ</div> 
+        <div class="formInfo">Please fill in the form to sign up</div>
+        <div class="joinUs">And to join DontQ</div>
 
-        <section class="login-section">
+        <div class="login-section">
 
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
                 <li>{{ message }}</li>
-                    {% endfor %}
+                {% endfor %}
             </ul>
             {% endif %}
-            
-            <form method="POST" action="">
+
+            <form method="POST">
                 {% csrf_token %}
 
                 <div>
                     <label for="business" class="aligned">Business Name:</label>
                 </div>
                 <div>
-                    <input type="text" id="business" name="businessName" value="" required>
+                    <input type="text" id="business" name="businessName" value="" required />
                 </div>
-
                 <div>
                     <label for="business" class="aligned">Contact Email: </label>
                 </div>
                 <div>
-                    <input type="text" id="business" name="owner" value="" required>
+                    <input type="text" id="business" name="owner" value="" required />
                 </div>
-
                 <div>
                     <label for="password" class="aligned"> Password:</label>
                 </div>
                 <div>
-                    <input type="password" id="password" name="passwordOne" required>
+                    <input type="password" id="password" name="passwordOne" required />
                 </div>
                 <div>
                     <label for="password" class="aligned">Repeat Password:</label>
                 </div>
                 <div>
-                    <input type="password" id="password" name="passwordTwo" required>
+                    <input type="password" id="password" name="passwordTwo" required />
                 </div>
                 <div>
-                    <button type="submit" value="register" class="login">Register
+                    <button type="submit" value="register" class="login">Register</button>
                 </div>
             </form>
-       
-            <div class="noAccount">Have an account?</div>
-            <a href="/accounts/login" <div class="register">Login Here</div> </a>  
-           
 
-        </section>
+            <div class="noAccount">Have an account?</div>
+            <a href="/accounts/login" class="register">Login Here</a>
 
         </div>
 

@@ -232,17 +232,11 @@ To get the Django framework installed and set up I followed Code Institutes Djan
 
 ## Credit
 
-Instuctions on Heruko and Django was found [here](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit)
+- Instuctions on Heruko and Django was found [here](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit)
 
-[W3School](https://www.w3schools.com/) helped me out with CSS and HTML code. 
+- [W3School](https://www.w3schools.com/) helped me out with CSS and HTML code. 
 
-My QR code was created
+- My QR code was created by importing [urllib.parse]() into the file.
 
+- Jquery, Font Awesome and Google Fonts were also imported in the file. 
 
-import urllib.parse
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
-<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-
-<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>

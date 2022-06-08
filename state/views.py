@@ -37,7 +37,7 @@ class ControlPage(View):
         print(">>>>>", state.business)
 
         url_pop_up_text = f"{url}/user?{urllib.parse.quote(str(state.business))}"
-        opentext = f"Helping currently:"
+        opentext = f"Currently helping:"
         if state.current == 0:
             opentext = f"Press the green button to start the queue."
         context = {
@@ -175,7 +175,7 @@ def makeContext(currentInt, ticketStr):
             textFour = f"So {ticketInt - currentInt} people are in line before you."
     else:
         if ticketInt < currentInt:
-            textThree = "You missed your turn"
+            textThree = "You missed out"
         if ticketInt == currentInt:
             textThree = "It is your turn"
         if ticketInt - currentInt == 1:

@@ -57,6 +57,7 @@ body {
     color: #027E88;
     font-family: Jura;
     font-size: 14px;
+    text-transform: capitalize;
 
 }
 
@@ -75,7 +76,6 @@ body {
 
 .mainText {
     padding-top: 5vh;
-    padding-bottom: 1vh;
     font-size: 20px;
     font-family: Jura;
     color: #61514B;
@@ -89,15 +89,13 @@ body {
 #queueNumber {
     color: #07485A;
     font-family: Merriweather, Arial;
-    font-size: 150px;
-    margin: auto;
+    font-size: 130px;
     text-align: center;
-    padding: 10px;
 }
 
 .buttonRow {
-    margin-bottom: 10%;
-    /* margin-top: 10%; */
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,11 +106,12 @@ body {
     background-color: #FFFFFD;
     color: #027E88;
     border: 1px solid #027E88;
-    padding: 5px 34px;
+    padding: 0px 34px;
     text-align: center;
     display: inline-block;
     font-size: 64px;
-    margin: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .nextButton {
@@ -120,11 +119,12 @@ body {
     background-color: #027E88;
     color: #FFFFFD;
     border: 1px solid #FFFFFD;
-    padding: 5px 34px;
+    padding: 0px 34px;
     text-align: center;
     display: inline-block;
     font-size: 64px;
-    margin: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
 }
 
 .resetButton {
@@ -145,7 +145,7 @@ body {
     align-items: center;
     color: #F44D29;
     background-color: #FFFFFD;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: inline;
 }
 
@@ -172,8 +172,7 @@ body {
 
 .businessInput i {
     font-size: 14px;
-    /* padding: 1%; */
-    padding-bottom: 5vh;
+    padding-bottom: 5px;
     color: #027E88;
 }
 
@@ -182,6 +181,7 @@ body {
     margin-left: 70%;
     text-align: center;
     padding-top: 3vh;
+    display: flex;
 }
 
 #mainLogo {
@@ -279,14 +279,15 @@ input[type=password] {
 }
 
 #confirm #qrcode {
-    padding-left: 95px;
     text-align: center;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 #confirm .url {
     font-size: 9px;
-    padding-top: 1vh;
+    padding-top: 110px;
     padding-left: 50px;
     padding-right: 50px;
 }

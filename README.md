@@ -6,7 +6,7 @@ DontQ is a queuing web browser application and service where businesses can offe
 
 By scanning a QR-code when entering the store customers will automatically receive their queueing number. They will be updated on current number, remaining queueing numbers and a message when it is their turn. 
 
-The idea is, instead of printing out tickets when entering stores (for business useing this type of queing system) everything is online and on personal devices. This application is a sustainable way of thinking and can be used in any store that uses any sort of queuing system, using numbers. 
+The idea is, instead of printing out tickets when entering stores (for business using this type of queuing system) everything is online and on personal devices. This application is a sustainable way of thinking and can be used in any store that uses any sort of queuing system, using numbers. 
 
 ![Ami Responsive](state/static/images/ami.png)
 
@@ -34,6 +34,7 @@ __How to use the application DontQ.__
 ### Login Page
 The login page is the home page for businesses using the application. From there they can read about DontQ, register a new business and sign in to get access to the control page. 
 
+
 Home Page
 ![Login Page](state/static/images/home-page.png)
 Head Logo
@@ -46,7 +47,7 @@ Infomation
 ![Info Section](state/static/images/info.png)
 
 ### Register Page
-The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will recireceive an error message guiding them to login.  
+The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will receive an error message guiding them to login.  
 
 Create Account 
 ![Create Account ](state/static/images/reg-page.png)
@@ -76,7 +77,7 @@ Update Business Info
 ![Update Info ](state/static/images/update.png)
 
 ### User Page 
-The user page is where users see their individual queueing ticket by scaning the QR code or copying the Url. This is where they will be updated on the current and remaining queue number. 
+The user page is where users see their individual queueing ticket by scanning the QR code or copying the Url. This is where they will be updated on the current and remaining queue number. 
 
 Updated Queue
 ![Queue Update](state/static/images/queue-message.png)
@@ -85,13 +86,13 @@ Updated Queue
 ### Future Features
 I would like to add: 
 - Give and update clients the expected estimated waiting time.
-- Give clients an cancellation option.
+- Give clients a cancellation option.
 - Give clients the option to skip my turn and let the person with the number behind go before my turn. 
-- Give business the option to create thier own design, choosing font-colors, background photos and edit text. 
+- Give business the option to create their own design, choosing font-colors, background photos and edit text. 
 
 ## Design  
 __Color Scheme__
-I wanted to keep the color scheme simple for this project so I chose colors that work nicley together. Two dark colors, two pop colors and one light color. 
+I wanted to keep the color scheme simple for this project so I chose colors that work nicely together. Two dark colors, two pop colors and one light color. 
 ![Color Scheme](state/static/images/color-scheme.png)
 
 __Wireframes__
@@ -163,21 +164,43 @@ My wireframe and design were created using Figma.
 
 
 ## Manual Testing 
+The final version was tested by using each function on each page.
 
-__Add Business__ 
-- A business can easily resister themself straight on the site. 
+Login page: 
+- Verify that both correct login and incorrect login are handled. 
+- Verify that the registration link works.
 
-__Edit Business__ 
-- Once the business has signed in, changing email or password i possible. 
+Register page: 
+- Verify that a new business can be registered. 
+- Verify that business does not already exist. 
+- Verify that both password entered match with each other. 
+- Verify that the login link works. 
 
-__Delete Business__
-The business can decide to delete thier account just by clicking the text that says delete.
+Control page: 
+- Verify that the number changes by clicking on the arrow < and >.
+    - By clicking the button marked > the number is incremented.
+    - By clicking the button marked > and then the button marked < the number is unchanged. 
+    - By clicking the button marked <, then click it one more time the number is still 0. 
+- Verify that the reset button restart with the number 0. 
+- Verify that the URL code match with the business signed in. 
+- Verify that the edit icon link works.
+- Verify that the logout link works. 
 
-Queue Infomation Update
+Update page: 
+- Verify that new email or password is saved by clicking on the save button. 
+- Verify that both password entered match with each other. 
+- Verify that by changing only email and saving, the business returns to the control page. 
+- Verify that business automatically is singed out after changing password but not email. 
+- Verify that account get deleted by clicking on the text that says delete. 
+ 
+User page: 
+- Verify that text and number match together. 
+- Verify that socialmedia link works. 
+
 
 
 ## Bugs Found
-The Url will be automaticly updated and will not work after some time. 
+The Url will be automatically updated and will not work after some time. 
 
 ## Deployment
 
@@ -214,4 +237,13 @@ Instuctions on Heruko and Django was found [here](https://docs.google.com/docume
 
 [W3School](https://www.w3schools.com/) helped me out with CSS and HTML code. 
 
-My QR code was created [here](https://www.the-qrcode-generator.com/) 
+My QR code was created
+
+
+import urllib.parse
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>

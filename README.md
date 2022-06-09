@@ -1,14 +1,35 @@
 # DontQ
 __Live Site:__
 [DontQ](https://emmabergner.github.io/dontq/) 
-
 DontQ is a queuing web browser application and service where businesses can offer their customers an easy and sustainable way of queueing. With DontQ, your customer will receive an queueing number straight in the phone. 
 
 By scanning a QR-code when entering the store customers will automatically receive their queueing number. They will be updated on current number, remaining queueing numbers and a message when it is their turn. 
 
 The idea is, instead of printing out tickets when entering stores (for business using this type of queuing system) everything is online and on personal devices. This application is a sustainable way of thinking and can be used in any store that uses any sort of queuing system, using numbers. 
 
+
 ![Ami Responsive](state/static/images/ami.png)
+
+The idea for this project came from an own experience a couple of weeks ago when me and my friend was trying to get a table at a restaurant. It was a sunny day and everywhere was packed, fallowed with a waiting list up to 67 people. I thought to myself, how this man standing with all phone numbers needs to contact each and everyone saying that there is a table ready for them. 
+
+Inorder for this system to work:
+- Staff has to have the time to go through the list and make these phone calls. 
+- Customer has to be open to giving out their phone number to the business.
+- Customer have to be close enough to the business inorder to make it back for their turn. 
+
+
+A store won’t call their customers who’s waiting for their turn since they haven’t left the store. Some stores print out queueing tickets to keep track of the queue (witch is thrown after being served and a waist for the enviornment) . But people are forced to stay inside to queue and in some cases the store can be packed with people. 
+
+Changes so customers can:
+- Step outside and fallow the queue from a distance.
+- Make other errands while waiting for their turn. 
+
+To adress and replace the lack in this system, with a digital and remotely system where customers can fallow their queueing process themselves. 
+
+The interface for customers and for business looks different. 
+
+For customers to know what place in the queue they are at the moment.
+For businesses to change and control who in the queue that is being served.  
 
 ## Project Plan 
 I used Trello to plan and to fallow up with my project. 
@@ -37,56 +58,68 @@ __How to use the application DontQ.__
 ### Login Page
 The login page is the home page for businesses using the application. From there they can read about DontQ, register a new business and sign in to get access to the control page. 
 
-
-Home Page
-![Login Page](state/static/images/login-head.png)
-Head Logo
 ![Logo](state/static/images/logo.png)
-Login section 
+This is the head logo and appears on every page so users easily know they are using DontQ services.
+
+![Login Page](state/static/images/login-head.png)
+This is the home page and the first page busniesses see. 
+
 ![Login Section](state/static/images/login.png)
-Functions 
+This is where busniesses who already is registerd can login. 
+
 ![Function Section](state/static/images/we-do.png)
-Infomation 
+This is where business can click to read about what we do or click to register an account. 
+
 ![Info Section](state/static/images/info.png)
+This is where busniesses can read more about what we do.
+
 
 ### Register Page
 The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will receive an error message guiding them to login.  
 
-Create Account 
 ![Create Account ](state/static/images/register-page.png)
-"Already have account"
+This is where you fill in the infomation to register an new account. 
+
 ![Business Excist ](state/static/images/business.png)
-"Password don't match"
+Incase a business already has an accout with us they will recive a message telling them to login.
+
 ![Password dont match ](state/static/images/password.png)
+Incase a busniess types in a password that don't match will a message tell them to try again. 
 
 ### Control Page
 The control page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For clients to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the OR code in the shop.
 
-Head Page
 ![Control Page ](state/static/images/control-head.png)
-Button Control 
+After signing in with a business this is what they will see and from here they have access to their queue. 
+
 ![Button Control ](state/static/images/button-control.png)
-Reset 
+This is where the business controls the queue.
+When clicking on the green button the number will increase with one and when clicking on the white button the number will decrease with one. 
+ 
 ![Reset ](state/static/images/reset.png)
-Menu Options
+With one click the business can reset the queue , just before opening in the morning when they want the number to begin with 0 could be an typical case for this. 
+
 ![Menu ](state/static/images/menu.png)
-Url Code
+A menu can be found in the footer of the page. Under the business name infomation can be edited by clicking on the name. The busniess can find their personal Url-code to give out to their custmumors. By clicking on logout, the business has signed out. 
+
 ![Url code ](state/static/images/url-info.png)
+The business can offer its customuers the url or place a copy of the OR code in the shop for custumors to scan. 
 
 ### Update Page
 The update page is if businesses wants to change or update email or password, or if they want to delete their account. 
 
-Update Business Info
 ![Update Info ](state/static/images/update-head.png)
+By clicking on the businessname and edit logo the business will be able to update and change email adress or password. By pressing save, this infomation will be saved. Businesses are also able to delete their account with us just by clicking on the delete account text. 
+
 
 ### User Page 
 The user page is where users see their individual queueing ticket by scanning the QR code or copying the Url. This is where they will be updated on the current and remaining queue number. 
 
-User Page
 ![Queue Update](state/static/images/user-page.png)
+This is what the custemor will see after scaning the QR code in the store. They will recive infomation about what number is being served at the moment, what queue number themself has and how many people are inline before. This will be updated and when coming close to being your turn you will recive a message on the screen.
 
-Updated Queue
 ![Queue Update](state/static/images/q-message.png)
+When one person is in line before, the number will change to a message saying "You are next in line". When it is your turn, you will recive the message "It is your turn". If for some reason you happen to miss your turn, you will recive the message "You missed out". 
 
 
 ### Future Features
@@ -114,35 +147,29 @@ My wireframe and design were created using Figma.
 - JavaScript 
 
 ## Frameworks, Libraries and Programmes Used
-- __GitHub:__
-    GitHub was used to store the code for the project. 
-
-- __GitPod:__
-     GitPod was used to provide the programming environment. 
-
+- __GitHub__
+    was used to store the code for the project. 
+- __GitPod__
+    was used to provide the programming environment. 
 - __Django__
-    Django is a python based framework that was used to develop the web application.
-
+    is a python based framework that was used to develop the web application.
 - __PostgreSQL__
-    PostgreSQL is database being used. 
-
+    is database being used. 
 -  __Heroku__ 
-    Heroku is a cloud based application platform connected to GitHub, used to deploy this project.
-
-- __Google Fonts:__
-    Google Fonts was used to import the font Jura, Merriweather and Poiret One as the fonts for this project.
-
-- __Font Awesome:__
-    Font Awesome was used for the fullscreen button icon.
-
+    is a cloud based application platform connected to GitHub, used to deploy this project.
+- __Google Fonts__
+    was used to import the font Jura, Merriweather and Poiret One as the fonts for this project.
+- __Font Awesome__
+    was used for the fullscreen button icon.
 - __Photoshop:__
-    Photoshop was used to resize and to edit background image.
-
+    was used to resize and to edit background image.
 - __Trello__
-    Trello was used for adding user stories, tasks and to fallow the project. 
-
+    was used for adding user stories, tasks and to manage the project. 
 - __Figma__
-    Figma is a wireframing tool and helped with the design for this project. 
+    is a wireframing tool and helped with the design for this project. 
+- __URL__
+    was endcode and decode by importing [urllib.parse]() into the file.
+
 
 ## Testing 
 ### Validator Testing 
@@ -162,7 +189,7 @@ My wireframe and design were created using Figma.
 - Accessibility 
   - The colors and fronts are easy to read and accessible by running it through lighthouse in devtools. 
 
-![Validator Testing](state/static/images/light-house.png) 
+![Validator Testing](state/static/images/light-house.png)
 
 ## Manual Testing 
 The final version was tested by using each function on each page.
@@ -199,7 +226,7 @@ User page:
 - Verify that socialmedia link works. 
 
 ## Bugs Found
-The Url will be automatically updated and will not work after some time. 
+
 
 ## Deployment
 
@@ -226,7 +253,6 @@ Login to Heroku.
 - View the build log to make sure that everything works okay.
 - The app has been deployed to Heroku.
 
-
 To get the Django framework installed and set up I followed Code Institutes Django [sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
 
 
@@ -236,7 +262,5 @@ To get the Django framework installed and set up I followed Code Institutes Djan
 
 - [W3School](https://www.w3schools.com/) helped me out with CSS and HTML code. 
 
-- My QR code was created by importing [urllib.parse]() into the file.
-
-- Jquery, Font Awesome and Google Fonts were also imported in the file. 
+- [Slackoverflow](https://stackoverflow.com/) helped me out with code solutions throughout the project.
 

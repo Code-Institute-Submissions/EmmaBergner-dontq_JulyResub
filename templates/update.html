@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel='shortcut icon' type='image/x-icon' href="{% static 'icon.ico' %}"> />
     <title>DontQ</title>
 </head>
 
@@ -37,19 +38,19 @@
                     <label for="business" class="aligned">Contact Email: </label>
                 </div>
                 <div>
-                    <input type="text" id="business" name="owner" value="{{contactEmail}}" required/>
+                    <input type="text" id="business" name="owner" value="{{contactEmail}}" required />
                 </div>
                 <div>
                     <label for="password" class="aligned"> Password:</label>
                 </div>
                 <div>
-                    <input type="password" id="password" name="passwordOne"/>
+                    <input type="password" id="password" name="passwordOne" />
                 </div>
                 <div>
                     <label for="password" class="aligned">Repeat Password:</label>
                 </div>
                 <div>
-                    <input type="password" id="password" name="passwordTwo"/>
+                    <input type="password" id="password" name="passwordTwo" />
                 </div>
                 <div>
                     <button type="submit" value="update" class="save">Save </button>
@@ -58,7 +59,7 @@
 
             <div class="buttonRow">
                 <form action="#" method="GET">
-                    <input type="submit" class="deleteButton" value="Delete Account" name="delete"/>
+                    <input type="submit" class="deleteButton" value="Delete Account" name="delete" />
                     {% csrf_token %}
                 </form>
             </div>

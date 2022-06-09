@@ -1,35 +1,47 @@
 # DontQ
 __Live Site:__
 [DontQ](https://emmabergner.github.io/dontq/) 
-DontQ is a queuing web browser application and service where businesses can offer their customers an easy and sustainable way of queueing. With DontQ, your customer will receive an queueing number straight in the phone. 
+DontQ is a queuing web browser application and service where your business can offer their customers an easy and sustainable way of queueing. With DontQ, your customer will receive an queueing number straight in the phone. 
 
-By scanning a QR-code when entering the store customers will automatically receive their queueing number. They will be updated on current number, remaining queueing numbers and a message when it is their turn. 
+By scanning a QR-code when entering the store, customers will instantly receive a place in the queue. They will be updated continuously on the queue's progress and receive a message on current number, remaining queueing numbers and a message when it is their turn. 
 
+Everything is online and on personal devices. So for businesses currently using paper queueing tickets, this service is a more sustainable implementation of that system, with the additional benefits listed below.
 The idea is, instead of printing out tickets when entering stores (for business using this type of queuing system) everything is online and on personal devices. This application is a sustainable way of thinking and can be used in any store that uses any sort of queuing system, using numbers. 
 
 
 ![Ami Responsive](state/static/images/ami.png)
 
-The idea for this project came from an own experience a couple of weeks ago when me and my friend was trying to get a table at a restaurant. It was a sunny day and everywhere was packed, fallowed with a waiting list up to 67 people. I thought to myself, how this man standing with all phone numbers needs to contact each and everyone saying that there is a table ready for them. 
+## The problem we want to solve
 
-Inorder for this system to work:
+The idea for this project came from an own experience a couple of weeks ago when me and my friend [SE were] was trying to get a table at a restaurant. It was a sunny day and everywhere was packed, with a waiting list of up to 67 people. By giving my phone number I could be number 68 and the staff would contact me when it was my turn. I thought to myself, of this man standing with all phone numbers who needs to contact each and everyone saying that there is a table ready for them. 
+
+In order for that business' system to work:
 - Staff has to have the time to go through the list and make these phone calls. 
-- Customer has to be open to giving out their phone number to the business.
-- Customer have to be close enough to the business inorder to make it back for their turn. 
+- Customers have to be open to giving out their phone number to the business.
+- Customers have to be close enough to the business in order to make it back for their turn once they get the call, in spite of not knowing when that will be. 
 
+For a business with higher through-put, like a shop, phoning each customer is not an option, so customers have to stay in the shop to claim their turn at the right time.
 
-A store won’t call their customers who’s waiting for their turn since they haven’t left the store. Some stores print out queueing tickets to keep track of the queue (witch is thrown after being served and a waist for the enviornment) . But people are forced to stay inside to queue and in some cases the store can be packed with people. 
+Pain points with this system:
+- The shop can get crowded, providing an unpleasant environment for all involved.
+- Customers are prevented from using the time in the queue for better things.
+- If queueing tickets are used, these are a cost, a waste of paper, and a source of litter.
+
+## The solution
+
+To adress and replace the lack in this system, with a digital and remotely system where customers can fallow their queueing process themselves. 
 
 Changes so customers can:
 - Step outside and fallow the queue from a distance.
 - Make other errands while waiting for their turn. 
 
-To adress and replace the lack in this system, with a digital and remotely system where customers can fallow their queueing process themselves. 
+Each customer (user, for the rest of this document), interfaces the service through a web page that provides:
+- That user's queue number.
+- Number of people in frontline before that user.
 
-The interface for customers and for business looks different. 
-
-For customers to know what place in the queue they are at the moment.
-For businesses to change and control who in the queue that is being served.  
+The business uses a different interface, a web page that:
+- Displays the queue number of the latest user being served.
+- Allows incrementing (and decrementing in case of a mistake) the queue number to be served.
 
 ## Project Plan 
 I used Trello to plan and to fallow up with my project. 
@@ -53,73 +65,68 @@ __Superuser / Admin__
 
 
 ## Features
-__How to use the application DontQ.__
-
-### Login Page
-The login page is the home page for businesses using the application. From there they can read about DontQ, register a new business and sign in to get access to the control page. 
 
 ![Logo](state/static/images/logo.png)
-This is the head logo and appears on every page so users easily know they are using DontQ services.
+The logo appears on all pages, users will easily know they are using DontQ services.
 
+### Login Page
 ![Login Page](state/static/images/login-head.png)
-This is the home page and the first page busniesses see. 
+The login page is the home page for businesses using the application. Businesses can read about us, register a new business and sign in to get access to the control page. 
 
-![Login Section](state/static/images/login.png)
-This is where busniesses who already is registerd can login. 
-
-![Function Section](state/static/images/we-do.png)
-This is where business can click to read about what we do or click to register an account. 
+- This is the first page businesses see. 
+- Businesses who already is registered can login. 
+- Businesses can register an new account. 
 
 ![Info Section](state/static/images/info.png)
-This is where busniesses can read more about what we do.
+- More information can be found about what we do here.
 
 
 ### Register Page
-The register page is where new business can register their business. A business is able to have one account and not more. If an exciting business is trying to register, they will receive an error message guiding them to login.  
-
 ![Create Account ](state/static/images/register-page.png)
-This is where you fill in the infomation to register an new account. 
+The register page is where a new business can register their business. This is where you fill in the fallowing information to register a new account. 
 
-![Business Excist ](state/static/images/business.png)
-Incase a business already has an accout with us they will recive a message telling them to login.
-
-![Password dont match ](state/static/images/password.png)
-Incase a busniess types in a password that don't match will a message tell them to try again. 
+![Business Exist ](state/static/images/business.png)
+![Password don't match ](state/static/images/password.png)
+- Incase a business already has an account with us they will receive a message telling them to login. 
+- Incase a business types in a password that don't match they will receive a message telling them to try again. 
 
 ### Control Page
-The control page is where businesses control their individual queueing system after they login. With the options of rising or increasing the current number. If necessary or when starting a new day, the reset button comes to handy. The queue starts with number 1. For clients to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the OR code in the shop.
-
 ![Control Page ](state/static/images/control-head.png)
-After signing in with a business this is what they will see and from here they have access to their queue. 
+The control page is where businesses control their individual queueing system after they login. The queue starts with number 1. For users to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the OR code in the shop.
 
-![Button Control ](state/static/images/button-control.png)
-This is where the business controls the queue.
-When clicking on the green button the number will increase with one and when clicking on the white button the number will decrease with one. 
- 
-![Reset ](state/static/images/reset.png)
-With one click the business can reset the queue , just before opening in the morning when they want the number to begin with 0 could be an typical case for this. 
-
-![Menu ](state/static/images/menu.png)
-A menu can be found in the footer of the page. Under the business name infomation can be edited by clicking on the name. The busniess can find their personal Url-code to give out to their custmumors. By clicking on logout, the business has signed out. 
+- After signing in with a business this is what they will see and from here they have access to their queue. 
+- This is where the business controls the queue.
+- When clicking on the green button the number will increase with one and when clicking on the white button the number will decrease with one. 
+- With one click the business can reset the queue , just before opening in the morning when they want the number to begin with 0 could be an typical case for this. 
+![Update Info ](state/static/images/menu.png)
+- A menu can be found in the footer of the page. 
+- Under the business name information can be edited by clicking on the name. 
+- The business can find their personal Url-code to give out to their custmumors. 
+- By clicking on logout, the business has signed out. 
 
 ![Url code ](state/static/images/url-info.png)
-The business can offer its customuers the url or place a copy of the OR code in the shop for custumors to scan. 
+- The business can offer users their url or place a copy of the OR code in the shop for user to scan. 
 
-### Update Page
-The update page is if businesses wants to change or update email or password, or if they want to delete their account. 
-
+### Update Page 
 ![Update Info ](state/static/images/update-head.png)
-By clicking on the businessname and edit logo the business will be able to update and change email adress or password. By pressing save, this infomation will be saved. Businesses are also able to delete their account with us just by clicking on the delete account text. 
+The update page is where the business can change their login information. 
+- By clicking on the business name and edit logo the business will be able to update and change email adress or password. By pressing save, this information will be saved. 
+- Businesses are also able to delete their account with us just by clicking on the delete account text. 
 
 
 ### User Page 
-The user page is where users see their individual queueing ticket by scanning the QR code or copying the Url. This is where they will be updated on the current and remaining queue number. 
-
 ![Queue Update](state/static/images/user-page.png)
-This is what the custemor will see after scaning the QR code in the store. They will recive infomation about what number is being served at the moment, what queue number themself has and how many people are inline before. This will be updated and when coming close to being your turn you will recive a message on the screen.
+The user page is where users see their individual queueing ticket after scanning the QR code or copying the Url. This is where users will be updated on the current and remaining queue number. 
+ 
+- Users will receive information about what number is being served at the moment.
+- What queue number they have themselves. 
+- How many people are inline before. 
+- This will be updated and when coming close to being your turn you will receive a message on the screen.
 
 ![Queue Update](state/static/images/q-message.png)
-When one person is in line before, the number will change to a message saying "You are next in line". When it is your turn, you will recive the message "It is your turn". If for some reason you happen to miss your turn, you will recive the message "You missed out". 
+- When one person is in line before, the number will change to a message saying "You are next in line". 
+- When it is your turn, you will receive the message "It is your turn". 
+- If for some reason you happen to miss your turn, you will receive the message "You missed out". 
 
 
 ### Future Features
@@ -226,7 +233,7 @@ User page:
 - Verify that socialmedia link works. 
 
 ## Bugs Found
-
+No bugs found. 
 
 ## Deployment
 
@@ -263,4 +270,6 @@ To get the Django framework installed and set up I followed Code Institutes Djan
 - [W3School](https://www.w3schools.com/) helped me out with CSS and HTML code. 
 
 - [Slackoverflow](https://stackoverflow.com/) helped me out with code solutions throughout the project.
+
+- My favicon was created [here](https://icons8.com/icon/66752/circled-q) and converted [here](https://hnet.com/png-to-ico/)
 

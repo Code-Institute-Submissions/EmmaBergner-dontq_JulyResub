@@ -50,6 +50,7 @@ The login page is the first page a business will see when using the service. Fro
 ![Login Page](state/static/images/login-head.png)
 
 #### __Information box__
+The infromation box offers general infromation about the service for new visitors. 
 ![Info Section](state/static/images/info.png)
 
 #### __Register Page__
@@ -73,7 +74,7 @@ The footer contains a menu of three additional options:
 - Clicking on "URL" brings up the User URL display box, where the business can find the URL for their user page. 
 - By clicking on "logout", the business logs out. 
 
-![Update Info ](state/static/images/control-head.png)
+![Update Info ](state/static/images/control.png)
 
 #### __User URL Display Box__
 For users to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the QR code in the shop.
@@ -81,7 +82,7 @@ For users to receive tickets, they need to load the URL. An easy way to achieve 
 
 
 #### __Update Information Page__ 
-The update page is where the business can change their login information. There are three options:
+The update page is where the business can change their login registation. There are three options:
 - Change current email adress.
 - Change current password. 
 - Delete their account with us just by clicking "delete account".
@@ -133,15 +134,18 @@ I used Trello to plan and to fallow up with my project.
 
 ## Design  
 __Color Scheme__
-I wanted to keep the color scheme simple for this project so I chose colors that work nicely together. Two dark colors, two pop colors and one light color. 
+
+I wanted to keep the color scheme simple for this project so I chose i minimum of colors (that work nicely together). Two dark colors, two pop colors and one light color. 
 ![Color Scheme](state/static/images/color-scheme.png)
 
 __Favicon__ 
-My favicon is a Q stands for queue just like my logo does. The favicon has the same color as the Q in the logo and was created with icons8. 
+
+My favicon is a Q stands for queue just like my logo does. The favicon has the same color as the Q in the logo and was created with the webserver icons8. 
 ![Wireframe](state/static/images/favico.png)
 
 __Wireframes__
-My wireframe and design were created using Figma. 
+
+I created my wireframe and the design using Figma. 
 ![Wireframe](state/static/images/wireframe.png)
 
 ## Technologies Used
@@ -194,7 +198,7 @@ My wireframe and design were created using Figma.
 - Accessibility 
   - The colors and fronts are easy to read and accessible by running it through lighthouse in devtools. 
 
-![Validator Testing](state/static/images/light-house.png)
+![Validator Testing](state/static/images/lighthouse.png)
 
 ## Manual Testing 
 The final version was tested by using each function on each page.
@@ -231,7 +235,7 @@ User page:
 - Verify that socialmedia link works. 
 
 ## Bugs Found
-No bugs found remaining. 
+No known bugs. 
 
 ## Deployment
 This project was deployed using Github and Heroku.

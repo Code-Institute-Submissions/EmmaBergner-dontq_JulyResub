@@ -3,53 +3,117 @@ __Live Site:__
 [DontQ](https://emmabergner.github.io/dontq/) 
 
 The name DontQ stands for: Do not queue (in a physical queue).
-DontQ is a queuing web browser application and service where your business can offer their customers an easy and sustainable way of queueing. With DontQ, your customer will receive an queueing number straight in the phone.
 
-This application can be used for any business or businesses with a use of any type of system where a queue in involved. I have chosen stores as the business in this project to focus on.
+DontQ is a web browser application and service where your business can offer their customers an easy and sustainable way of queueing. With DontQ, your customer will receive an queueing number straight in the phone.
 
-By scanning a QR-code when entering the store, customers will instantly receive a place in the queue. They will be updated continuously on the queue's progress and receive a message on current number, remaining queueing numbers and a message when it is their turn. 
+Customers will instantly receive a place in queue by scanning a QR-code when entering a store. They will be updated continuously on the queue's progress and a message when it is their turn. 
 
 Everything is online and on personal devices. So for businesses currently using paper queueing tickets, this service is a more sustainable implementation of that system, with the additional benefits listed below.
 
 ![Ami Responsive](state/static/images/ami.png)
 
 ## The problem we want to solve
-The idea for this project came from an own experience a couple of weeks ago when me and my friend were trying to get a table at a restaurant. It was a sunny day and everywhere was packed, with a waiting list of up to 67 people. By giving my phone number I could be number 68 and the staff would contact me when it was my turn. I thought to myself, there must be an easier way of doing this other than contacting each and everyone by phone saying that there is a table ready for them. 
+The idea for this project came from my own experience a couple of weeks ago when me and my friend were trying to get a table at a restaurant. It was a sunny day and everywhere was packed, with a waiting list of up to 67 people. By giving my phone number I would be number 68 inline and the staff would contact me when it was my turn. I thought to myself, there must be an easier way of doing this other than contacting each and everyone by phone to say that there is a table ready for them. 
 
 In order for that business system to work:
-- Staff has to have the time to go through the list and make these phone calls. 
+- Staff has to have the time to make these phone calls. 
 - Customers have to be open to giving out their phone number to the business.
 - Customers have to be close enough to the business in order to make it back for their turn once they get the call, in spite of not knowing when that will be. 
 
-For a business with higher through-put, like a shop, phoning each customer is not an option, so customers have to stay in the shop to claim their turn at the right time.
-
-Pain points with this system:
+For a business with higher through-put, like a shop, phoning each customer is not an option, so customers have to stay in the shop to claim their turn at the right time. Pain points with this system:
 - The shop can get crowded, providing an unpleasant environment for all involved.
 - Customers are prevented from using the time in the queue for better things.
-- If queueing tickets are used, these are a cost, a waste of paper, and a source of litter.
+- If queueing tickets are used, they are a cost, a waste of paper, and a source of litter.
 
 ## The solution
-To adress and replace the lack in this system, I want to add and create a digital and remotely system where customers can fallow their queueing process themselves. 
-
-Changes so customers can:
-- Step outside and fallow the queue from a distance.
-- Make other errands while waiting for their turn. 
+To address the issicus in these systems, I want to add and create an online service where customers can follow their queueing process themselves. With this solustion customers can step outside, fallow the queue from a distance and make other errands while waiting for their turn. 
 
 Each customer (user, for the rest of this document), interfaces the service through a web page that provides:
 - That user's queue number.
-- Number of people in frontline before that user.
+- Number of people in line before that user.
 
 The business uses a different interface, a web page that:
 - Displays the queue number of the latest user being served.
 - Allows incrementing (and decrementing in case of a mistake) the queue number to be served.
 
-## Project Plan 
-I used Trello to plan and to fallow up with my project. 
-![Ami Responsive](state/static/images/trellos.png)
+## Features
+![Logo](state/static/images/logo.png)
+The name and the logo DontQ, stands for not to queue and appears on all pages, users will knows they are using the service by seeing this logo.
 
+### The Business Interface
+
+#### __Login Page__
+The login page is the first page a business will see when using the service. From here there are two way to continue:
+- More information about what we do can be found in the information box.
+- Register a new business to sign in to get access to their control page. 
+- If already registered simply sign in to get access to their control page.  
+![Login Page](state/static/images/login-head.png)
+
+#### __Information box__
+![Info Section](state/static/images/info.png)
+
+#### __Register Page__
+The register page is for new businesses where they fill in the fallowing information to register a new account. 
+![Create Account ](state/static/images/register-page.png)
+There are two important rules here to follow: 
+
+![Business Exist ](state/static/images/business.png)
+- A business can only have one account with us. In case a business already has signed up with us they will receive a message guiding them to log in. 
+![Password don't match ](state/static/images/password.png)
+- It is important to get the password right. In case the first box doesn't match with the second box a message will guide them to try again. 
+
+#### __Control Page__
+Once logged in, the control page is where the business control their individual queueing system. The queue always starts with number 1. The number 0 menas that serving the queue hasn't started yet. There are three main options here: 
+- Incrementing the queue number with the green button (most common).
+- Decrementing the queue number with the white button (in case of mistake).  
+- The business can reset the queue to 0. Before opening in the morning is the typical case for this. 
+
+The footer contains a menu of three additional options: 
+- Under the business name, registration information can be edited and changed. 
+- Clicking on "URL" brings up the User URL display box, where the business can find the URL for their user page. 
+- By clicking on "logout", the business logs out. 
+
+![Update Info ](state/static/images/control-head.png)
+
+#### __User URL Display Box__
+For users to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the QR code in the shop.
+![Url code ](state/static/images/url-info.png)
+
+
+#### __Update Information Page__ 
+The update page is where the business can change their login information. There are three options:
+- Change current email adress.
+- Change current password. 
+- Delete their account with us just by clicking "delete account".
+![Update Info ](state/static/images/update-head.png)
+ 
+
+### The User Interface
+
+#### __User Page__
+The user page is where users see their individual queueing ticket after scanning the QR code in the store. This is where they will be updated continuously on the queue's progress. There are one static and two dynamic pieces of information here: 
+
+- User's place in the queue (static).
+- Current place in the queue being served at the moment.
+- Number in line ahead of the user. 
+![Queue Update](state/static/images/user-page.png)
+
+#### __Special Cases__
+When coming close to being their turn the user will receive a updated message on the screen:
+- When one person is in line ahead: "You are next in line". 
+- When it is the users turn: "It is your turn". 
+- If for some reason they happen to miss their turn: "You missed out". 
+![Queue Update](state/static/images/q-message.png)
+
+### Future Features
+There are many ways to extend the capabilities of the service. For instens I would like to add: 
+- Update user on the expected estimated waiting time.
+- Give users a cancellation option.
+- Give user the option to let the person with the number behind go before their turn. 
+- Give businesses the option to create their own design, choosing font-colors, background photos and adding informational text. 
 
 ### User Stories
-__User/Customer__
+__User__
 - As a user I want a queue number so that I know when it is my turn.
 - As a user I want to be updated on the current number so that I can claim my turn in time.
 
@@ -57,81 +121,15 @@ __Business__
 - As a business I want to be able to control the current number so that the queue number is correct.
 - As a business I want to be able to sign in with username and password so that I can access my queue.
 
-__Superuser / Admin__
+__Site Owner__
+- As a site owner I want businesses to register themselves to make things more smooth.
+- As a site owner I want to have separate queues so that more then one business can use my service at the same time.
 - As a site owner I want to be able to add new businesses so that they can use the service.
 - As a site owner I want to be able to remove businesses so that they can not use the service.
-- As a site owner I want to have separate queues so that more then one business can use my service at the same time.
-- As a site owner I want businesses to register themselves to make things more smooth.
 
-
-## Features
-![Logo](state/static/images/logo.png)
-The name and the logo DontQ, stands for not to queue and appears on all pages, users will knows they are using service by seeing this logo.
-
-### Login Page
-![Login Page](state/static/images/login-head.png)
-The login page is the first page business can see using the application. From here there are two way to continue:
-- Register a new business to sign in to get access to their control page. 
-- If already registered simply sign in to get access to their control page.  
-
-![Info Section](state/static/images/info.png)
-- More information about what we do can be found here.
-
-
-### Register Page
-![Create Account ](state/static/images/register-page.png)
-The register page is for new businesses where they fill in the fallowing information to register a new account. There are two important steps here to fallow: 
-
-![Business Exist ](state/static/images/business.png)
-![Password don't match ](state/static/images/password.png)
-- A business can only have one account with us. Incase a business already has signed up with us they will receive a message guiding them to login. 
-- It is important to get the password right. Incase the first box don't match with the second box a message will guide them to try again. 
-
-### Control Page
-![Control Page ](state/static/images/control-head.png)
-The control page is where the business control their individual queueing system after they sign-in. The queue always starts with number 1. There are two options here: 
-
-- Incrementing the queue number with the green button or decrementing the queue number with the white button (in case of mistake).  
-- The business can reset the queue to 0. Before opening in the morning is a typical case for this. 
-
-![Update Info ](state/static/images/menu.png)
-The footer contains a menu of three options: 
-- Under the business name, information can be edited and changed. 
-- Under the text "Url", businesses can find their personal Url-code and give out to users. 
-- By clicking on "logout", the business logout. 
-
-![Url code ](state/static/images/url-info.png)
-- For users to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the OR code in the shop.
-
-### Update Information Page 
-![Update Info ](state/static/images/update-head.png)
-The update page is where the business can change their login information. There are three options:
-- Change current email adress.
-- Change current password. 
-- Delete their account with us just by clicking "delete account". 
-
-
-### User Page 
-![Queue Update](state/static/images/user-page.png)
-The user page is where users see their individual queueing ticket after scanning the QR code in the store. This is were they will be updated continuously on the queue's progress. There are three changeable function here:
-
-- Current number being served at the moment.
-- Remaining queueing numbers.
-- Coming closer to their turn their individual queue number turns into a message. 
-
-![Queue Update](state/static/images/q-message.png)
-When coming close to being their turn they will receive a updated message on the screen:
-- When one person is in line before, the number will change to a message saying "You are next in line". 
-- When it is their turn, they will receive the message "It is your turn". 
-- If for some reason they happen to miss their turn, they will receive the message "You missed out". 
-
-
-### Future Features
-I would like to add: 
-- Give and update clients the expected estimated waiting time.
-- Give clients a cancellation option.
-- Give clients the option to skip my turn and let the person with the number behind go before my turn. 
-- Give business the option to create their own design, choosing font-colors, background photos and edit text. 
+## Project Plan 
+I used Trello to plan and to fallow up with my project. 
+![Ami Responsive](state/static/images/trellos.png)
 
 ## Design  
 __Color Scheme__
@@ -140,7 +138,7 @@ I wanted to keep the color scheme simple for this project so I chose colors that
 
 __Favicon__ 
 My favicon is a Q stands for queue just like my logo does. The favicon has the same color as the Q in the logo and was created with icons8. 
-![Wireframe](state/static/images/favicon.png)
+![Wireframe](state/static/images/favico.png)
 
 __Wireframes__
 My wireframe and design were created using Figma. 

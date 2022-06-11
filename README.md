@@ -26,7 +26,7 @@ For a business with higher through-put, like a shop, phoning each customer is no
 - If queueing tickets are used, they are a cost, a waste of paper, and a source of litter.
 
 ## The solution
-To address the issicus in these systems, I want to add and create an online service where customers can follow their queueing process themselves. With this solustion customers can step outside, fallow the queue from a distance and make other errands while waiting for their turn. 
+To address the issues in these systems, I want to add and create an online service where customers can follow their queueing process themselves. With this solution customers can step outside, fallow the queue from a distance and make other errands while waiting for their turn. 
 
 Each customer (user, for the rest of this document), interfaces the service through a web page that provides:
 - That user's queue number.
@@ -37,8 +37,9 @@ The business uses a different interface, a web page that:
 - Allows incrementing (and decrementing in case of a mistake) the queue number to be served.
 
 ## Features
+#### __Logo__
+The name and the logo DontQ, stands for not to queue and appears on all pages. Users will knows they are using the service by seeing this logo.
 ![Logo](state/static/images/logo.png)
-The name and the logo DontQ, stands for not to queue and appears on all pages, users will knows they are using the service by seeing this logo.
 
 ### The Business Interface
 
@@ -50,7 +51,7 @@ The login page is the first page a business will see when using the service. Fro
 ![Login Page](state/static/images/login-head.png)
 
 #### __Information box__
-The infromation box offers general infromation about the service for new visitors. 
+The information box offers general information about the service for new visitors. 
 ![Info Section](state/static/images/info.png)
 
 #### __Register Page__
@@ -177,7 +178,7 @@ I created my wireframe and the design using Figma.
 - __Figma__
     is a wireframing tool and helped with the design for this project. 
 - __URL__
-    was endcode and decode by importing [urllib.parse]() into the file and the code was found [here](https://www.urldecoder.io/python)
+    was encode and decode by importing [urllib.parse]() into the file and the code was found [here](https://www.urldecoder.io/python)
 
 
 ## Testing 

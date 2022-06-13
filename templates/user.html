@@ -61,6 +61,13 @@
 
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+    <script>
+        path = "{% static 'images/image.png' %}";
+        document.body.style.backgroundImage = "url('" + path + "')";
+        document.body.style.backgroundPosition = "center bottom";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
+    </script>
 </body>
 
 </html>

@@ -10,12 +10,6 @@ body {
     background-color: #FFFFFD;
 }
 
-.background {
-    background: url(../images/image.png) no-repeat center bottom;
-    background-attachment: fixed;
-}
-
-
 /* Business Html  */
 .headLine {
     position: relative;

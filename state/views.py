@@ -176,10 +176,10 @@ def makeContext(currentInt, ticketStr):
         if ticketInt == currentInt:
             textThree = "It is your turn"
         if ticketInt - currentInt == 1:
-            textThree = "You are next in line"
+            textThree = "You are next"
         if ticketInt - currentInt > 1:
             textOne = f"We are helping number {currentInt}"
             textTwo = "Your number is:"
             textThree = ticketStr
-            textFour = f"So {ticketInt - currentInt} people are in line before you."
+            textFour = f"So {ticketInt - currentInt -1} people are in line before you."
     return {'current': textOne, 'ticketText': textTwo, 'ticket': textThree, 'remaining': textFour}

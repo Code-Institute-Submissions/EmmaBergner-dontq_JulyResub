@@ -31,8 +31,8 @@ class ControlPage(View):
             return redirect('/')
         state.save()
         # URL, for example: .../user?baronen
-        url = 'https://8000-emmabergner-dontq-zj38f323g5o.ws-eu47.gitpod.io'
-
+        # For development: url = 'https://8000-emmabergner-dontq-zj38f323g5o.ws-eu47.gitpod.io'
+        url = 'https://dont-q.herokuapp.com'
         url_pop_up_text = f"{url}/user?{urllib.parse.quote(str(state.business))}"
         opentext = f"Currently helping:"
         if state.current == 0:

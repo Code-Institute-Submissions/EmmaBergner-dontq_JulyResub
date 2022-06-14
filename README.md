@@ -4,9 +4,9 @@ __Live Site:__
 
 The name DontQ stands for: Do not queue (in a physical queue).
 
-DontQ is a web browser application and service where your business can offer their customers an easy and sustainable way of queueing. With DontQ, your customer will receive an queueing number straight in the phone.
+DontQ is a web browser application and service where your business can offer their customers an easy and sustainable way of queueing. With DontQ, your customer will receive a queueing number straight in the phone.
 
-Customers will instantly receive a place in queue by scanning a QR-code when entering a store. They will be updated continuously on the queue's progress and a message when it is their turn. 
+Customers will instantly receive a place in queue by scanning a QR-code when entering a store. They will be updated continuously on the queue's progress and receive a message when it is their turn. 
 
 Everything is online and on personal devices. So for businesses currently using paper queueing tickets, this service is a more sustainable implementation of that system, with the additional benefits listed below.
 
@@ -15,7 +15,7 @@ Everything is online and on personal devices. So for businesses currently using 
 ## The problem we want to solve
 The idea for this project came from my own experience a couple of weeks ago when me and my friend were trying to get a table at a restaurant. It was a sunny day and everywhere was packed, with a waiting list of up to 67 people. By giving my phone number I would be number 68 inline and the staff would contact me when it was my turn. I thought to myself, there must be an easier way of doing this other than contacting each and everyone by phone to say that there is a table ready for them. 
 
-In order for that business system to work:
+In order for that business' system to work:
 - Staff has to have the time to make these phone calls. 
 - Customers have to be open to giving out their phone number to the business.
 - Customers have to be close enough to the business in order to make it back for their turn once they get the call, in spite of not knowing when that will be. 
@@ -26,7 +26,7 @@ For a business with higher through-put, like a shop, phoning each customer is no
 - If queueing tickets are used, they are a cost, a waste of paper, and a source of litter.
 
 ## The solution
-To address the issues in these systems, I want to add and create an online service where customers can follow their queueing process themselves. With this solution customers can step outside, fallow the queue from a distance and make other errands while waiting for their turn. 
+To address the issues in these systems, I want to create an online service where customers can follow their queueing progress themselves. With this solution customers can step outside, follow the queue from a distance and do other errands while waiting for their turn. 
 
 Each customer (user, for the rest of this document), interfaces the service through a web page that provides:
 - That user's queue number.
@@ -38,16 +38,16 @@ The business uses a different interface, a web page that:
 
 ## Features
 #### __Logo__
-The name and the logo DontQ, stands for not to queue and appears on all pages. Users will knows they are using the service by seeing this logo.
+The name and the logo DontQ appears on all pages. Users will knows they are using the service by seeing this logo.
 ![Logo](state/static/images/logo.png)
 
 ### The Business Interface
 
 #### __Login Page__
-The login page is the first page a business will see when using the service. From here there are two way to continue:
-- More information about what we do can be found in the information box.
-- Register a new business to sign in to get access to their control page. 
-- If already registered simply sign in to get access to their control page.  
+The login page is the first page a business will see when using the service. From here there are three ways to continue:
+- Open the information box for find more information about what we do.
+- Register a new business to sign in. 
+- If already registered simply sign in to get access to the control page.  
 ![Login Page](state/static/images/login-head.png)
 
 #### __Information box__
@@ -55,7 +55,7 @@ The information box offers general information about the service for new visitor
 ![Info Section](state/static/images/info.png)
 
 #### __Register Page__
-The register page is for new businesses where they fill in the fallowing information to register a new account. 
+The register page is for new businesses where they fill in the following information to register a new account. 
 ![Create Account ](state/static/images/register-page.png)
 There are two important rules here to follow: 
 
@@ -65,28 +65,28 @@ There are two important rules here to follow:
 - It is important to get the password right. In case the first box doesn't match with the second box a message will guide them to try again. 
 
 #### __Control Page__
-Once logged in, the control page is where the business control their individual queueing system. The queue always starts with number 1. The number 0 menas that serving the queue hasn't started yet. There are three main options here: 
+Once logged in, the control page is where the business controls their individual queueing system. The queue always starts with number 1. The number 0 menas that serving the queue hasn't started yet. There are three main options here: 
 - Incrementing the queue number with the green button (most common).
 - Decrementing the queue number with the white button (in case of mistake).  
 - The business can reset the queue to 0. Before opening in the morning is the typical case for this. 
 
 The footer contains a menu of three additional options: 
 - Under the business name, registration information can be edited and changed. 
-- Clicking on "URL" brings up the User URL display box, where the business can find the URL for their user page. 
-- By clicking on "logout", the business logs out. 
+- Clicking on "User URL" brings up the User URL display box, where the business can find the URL for their user page. 
+- By clicking on "Log out", the business logs out. 
 
 ![Update Info ](state/static/images/control.png)
 
 #### __User URL Display Box__
 For users to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the QR code in the shop.
-![Url code ](state/static/images/url-info.png)
+![Url code ](state/static/images/qr-code.png)
 
 
 #### __Update Information Page__ 
 The update page is where the business can change their login registation. There are three options:
 - Change current email adress.
 - Change current password. 
-- Delete their account with us just by clicking "delete account".
+- Delete their account with us just by clicking "Delete Account".
 ![Update Info ](state/static/images/update-head.png)
  
 
@@ -98,21 +98,25 @@ The user page is where users see their individual queueing ticket after scanning
 - User's place in the queue (static).
 - Current place in the queue being served at the moment.
 - Number in line ahead of the user. 
-![Queue Update](state/static/images/user-page.png)
+![Queue Update](state/static/images/user-update.png)
 
 #### __Special Cases__
 When coming close to being their turn the user will receive a updated message on the screen:
-- When one person is in line ahead: "You are next in line". 
-- When it is the users turn: "It is your turn". 
+- When only one person is in line ahead: "You are next in line". 
+- When it is the user's turn: "It is your turn". 
 - If for some reason they happen to miss their turn: "You missed out". 
 ![Queue Update](state/static/images/q-message.png)
 
 ### Future Features
-There are many ways to extend the capabilities of the service. For instens I would like to add: 
+There are many ways to extend the capabilities of the service. For instance I would like to add: 
 - Update user on the expected estimated waiting time.
 - Give users a cancellation option.
 - Give user the option to let the person with the number behind go before their turn. 
 - Give businesses the option to create their own design, choosing font-colors, background photos and adding informational text. 
+
+## Project Plan 
+I used Trello to plan and to follow up with my project. 
+![Ami Responsive](state/static/images/trellos.png)
 
 ### User Stories
 __User__
@@ -129,9 +133,6 @@ __Site Owner__
 - As a site owner I want to be able to add new businesses so that they can use the service.
 - As a site owner I want to be able to remove businesses so that they can not use the service.
 
-## Project Plan 
-I used Trello to plan and to fallow up with my project. 
-![Ami Responsive](state/static/images/trellos.png)
 
 ## Design  
 __Color Scheme__
@@ -146,7 +147,7 @@ My favicon is a Q stands for queue just like my logo does. The favicon has the s
 
 __Wireframes__
 
-I created my wireframe and the design using Figma. 
+I created my wireframes and the design using Figma. 
 ![Wireframe](state/static/images/wireframe.png)
 
 ## Technologies Used
@@ -164,23 +165,23 @@ I created my wireframe and the design using Figma.
 - __Django__
     is a python based framework that was used to develop the web application.
 - __PostgreSQL__
-    is database being used. 
+    is the DBMS being used. 
 -  __Heroku__ 
     is a cloud based application platform connected to GitHub, used to deploy this project.
 - __Google Fonts__
     was used to import the font Jura, Merriweather and Poiret One as the fonts for this project.
 - __Font Awesome__
-    was used for the fullscreen button icon.
+    was used for some of the icons.
 - __Photoshop:__
     was used to resize and to edit background image.
 - __Cloudinary:__ 
     was used to store images online.
 - __Trello__
-    was used for adding user stories, tasks and to manage the project. 
+    was used for keeping track of user stories, tasks and to manage the project. 
 - __Figma__
-    is a wireframing tool and helped with the design for this project. 
-- __URL__
-    was encode and decode by importing [urllib.parse]() into the file and the code was found [here](https://www.urldecoder.io/python)
+    is a graphic design tool and helped with the design for this project. 
+- __Urlib.parse__
+     is used to encode and decode some URLs (in case business name contains tricky characters) and the code was found [here](https://www.urldecoder.io/python)
 
 
 ## Testing 
@@ -198,8 +199,8 @@ I created my wireframe and the design using Figma.
 - JavaScript
   - No errors was found when passing through the official [Jshint validator](https://jshint.com/)
 
-- Accessibility 
-  - The colors and fronts are easy to read and accessible by running it through lighthouse in devtools. 
+- Lighthouse 
+  - The colors and fonts are easy to read and accessible by running it through lighthouse in devtools. 
 
 ![Validator Testing](state/static/images/lighthouse.png)
 
@@ -220,7 +221,7 @@ Control page:
 - Verify that the number changes by clicking on the arrow < and >.
     - By clicking the button marked > the number is incremented.
     - By clicking the button marked > and then the button marked < the number is unchanged. 
-    - By clicking the button marked <, then click it one more time the number is still 0. 
+    - The number shall never be less than 0.
 - Verify that the reset button restart with the number 0. 
 - Verify that the URL code match with the business signed in. 
 - Verify that the edit icon link works.

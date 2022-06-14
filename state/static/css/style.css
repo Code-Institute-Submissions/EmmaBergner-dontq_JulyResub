@@ -309,14 +309,6 @@ input[type=password] {
     text-align: center;
 }
 
-.joinUs {
-    font-family: Jura;
-    font-size: 14px;
-    color: #61514B;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
 .login-section {
     clear: both;
     text-align: center;
@@ -413,7 +405,7 @@ input[type=password] {
 
 #textThree {
     color: #07485A;
-    font-family: Jura;
+    font-family: Merriweather, Arial;
     font-size: 100px;
     margin: auto;
     text-align: center;
@@ -456,7 +448,7 @@ footer {
     margin: auto;
     text-align: center;
     color: #61514B;
-    font-family: Merriweather, Arial;
+    font-family: Jura;
     font-size: 13px;
 }
 

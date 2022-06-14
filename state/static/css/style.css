@@ -309,6 +309,13 @@ input[type=password] {
     text-align: center;
 }
 
+.joinUs {
+    font-family: Jura;
+    font-size: 14px;
+    color: #61514B;
+    text-align: center;
+}
+
 .login-section {
     clear: both;
     text-align: center;

@@ -79,7 +79,7 @@ The footer contains a menu of three additional options:
 
 #### __User URL Display Box__
 For users to receive tickets, they need to load the URL. An easy way to achieve this is to place a copy of the QR code in the shop.
-![Url code ](state/static/images/qr-code.png)
+![Url code ](state/static/images/mary-url.png)
 
 
 #### __Update Information Page__ 

@@ -1,6 +1,6 @@
 # DontQ
 __Live Site:__
-[DontQ](https://emmabergner.github.io/dontq/) 
+[DontQ](https://dont-q.herokuapp.com/) 
 
 The name DontQ stands for: Do not queue (in a physical queue).
 

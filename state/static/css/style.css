@@ -286,7 +286,7 @@ input[type=password] {
 /* Register Html  */
 .logoBig {
     text-align: center;
-    padding-top: 15vh;
+    padding-top: 10vh;
 }
 
 #mainLogo {
@@ -413,7 +413,7 @@ input[type=password] {
 
 #textThree {
     color: #07485A;
-    font-family: Merriweather, Arial;
+    font-family: Jura;
     font-size: 100px;
     margin: auto;
     text-align: center;

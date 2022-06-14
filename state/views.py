@@ -9,15 +9,11 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 import urllib.parse
 
-# Create your views here.
-
 
 @method_decorator(login_required, name='get')
 class ControlPage(View):
-    model = State
 
     def get(self, request, *args, **kwargs):
-        print(request.user)
         state = get_object_or_404(State, business=request.user)
         if (request.GET.get('mybtn') and state.current > 0):
             state.current = state.current-1
@@ -61,12 +57,11 @@ class Login(View):
         else:
             messages.error(request, "Login Failed. Please try again.")
             # Return an 'invalid login' error message.
-            print("Fel password " + request.POST.get('password'))
-            print("Fel username " + request.POST.get('username'))
             return render(request, 'login.html')
 
 
 class Register(View):
+
     def get(self, request, *args, **kwargs):
         return render(request, 'register.html')
 
@@ -93,6 +88,7 @@ class Register(View):
 
 
 class Update(View):
+
     def get(self, request, *args, **kwargs):
         if (request.GET.get('delete')):
             user = User.objects.get(username=request.user.username)
@@ -110,7 +106,6 @@ class Update(View):
                 request, "Password does not match. Please try again.")
             return render(request, 'update.html')
         # User.objects.update_user(username=businessName, email=email)
-
         u = request.user
         u.email = email
         if not passwordOne == "":
@@ -118,13 +113,11 @@ class Update(View):
         u.save()
         return redirect('/')
 
-
 def makeUpdateContext(user):
     return {'businessName': user.username, 'contactEmail': user.email}
 
 
 class UserPage(View):
-    model = State
 
     # URL, for example: .../user?baronen
     def get(self, request, *args, **kwargs):
@@ -140,7 +133,6 @@ class UserPage(View):
 
 
 class UserTwoPage(View):
-    model = State
 
     # URL, for example: .../usertwo?46&Baronen
     def get(self, request, *args, **kwargs):
@@ -161,6 +153,7 @@ def makeContext(currentInt, ticketStr):
     textTwo = ""
     textThree = ""
     textFour = ""
+    p = "person is" if ticketInt - currentInt -1 == 1 else "people are"
     if currentInt == 0:
         if ticketInt == 1:
             textOne = "We are just about to open."
@@ -169,7 +162,7 @@ def makeContext(currentInt, ticketStr):
             textOne = "We are just about to open."
             textTwo = "Your number is:"
             textThree = ticketStr
-            textFour = f"So {ticketInt - currentInt} people are in line before you."
+            textFour = f"So {ticketInt - currentInt -1} {p} in line before you."
     else:
         if ticketInt < currentInt:
             textThree = "You missed out"
@@ -181,5 +174,5 @@ def makeContext(currentInt, ticketStr):
             textOne = f"We are helping number {currentInt}"
             textTwo = "Your number is:"
             textThree = ticketStr
-            textFour = f"So {ticketInt - currentInt -1} people are in line before you."
+            textFour = f"So {ticketInt - currentInt -1} {p} in line before you."
     return {'current': textOne, 'ticketText': textTwo, 'ticket': textThree, 'remaining': textFour}

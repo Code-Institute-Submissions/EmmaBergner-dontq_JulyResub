@@ -173,6 +173,8 @@ I created my wireframe and the design using Figma.
     was used for the fullscreen button icon.
 - __Photoshop:__
     was used to resize and to edit background image.
+- __Cloudinary:__ 
+    was used to store images online.
 - __Trello__
     was used for adding user stories, tasks and to manage the project. 
 - __Figma__

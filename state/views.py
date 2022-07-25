@@ -157,7 +157,7 @@ def makeContext(currentInt, ticketStr):
     if currentInt == 0:
         if ticketInt == 1:
             textOne = "We are just about to open."
-            textThree = "You are next in line"
+            textThree = "You are next"
         else:
             textOne = "We are just about to open."
             textTwo = "Your number is:"
